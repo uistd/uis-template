@@ -1,0 +1,38 @@
+{
+  "name": "ffan/dop-uis-template",
+  "description": "FFan Dop UIService Basic Template. composer create-project ffan/dop-uis-template uis_template dev-master",
+  "keywords": [
+    "ffan",
+    "dop",
+    "uis",
+    "project template"
+  ],
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.6.0",
+    "ffan/dop-uis": "1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "FFan\\Uis\\Base\\": "base"
+    }
+  },
+  "config": {
+    "secure-http": false
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://composer.intra.ffan.com/repo/private/"
+    },
+    {
+      "type": "composer",
+      "url": "http://composer.intra.ffan.com/repo/packagist/"
+    },
+    {
+      "packagist": false
+    }
+  ]
+}
