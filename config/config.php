@@ -6,5 +6,5 @@ return array(
     //环境 dev, sit, uat, prod
     'env' => 'dev',
     //日志目录，默认在runtime目录的logs
-    'log_path' => 'logs'
+    'log_path' => 'logs',
 );

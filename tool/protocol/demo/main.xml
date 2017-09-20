@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol>
+    <action name="index">
+        <request>
+            <int name="a" default="10"/>
+            <int name="b" default="100"/>
+        </request>
+        <response>
+            <int name="plus" note="加"/>
+            <int name="minus" note="减"/>
+            <int name="multiply" note="乘"/>
+            <int name="divide" note="除"/>
+        </response>
+    </action>
+</protocol>
