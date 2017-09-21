@@ -1,5 +1,5 @@
 <?php
 $mock_file_dir = __DIR__ . DIRECTORY_SEPARATOR;
-ffan\dop\AutoLoader::add(array(
-    'ffan\dop\plugin\mock\main' => $mock_file_dir,
+FFan\Dop\AutoLoader::add(array(
+    '\Uis\Demo\Plugin\Mock\Main' => $mock_file_dir,
 ));

@@ -1,12 +1,16 @@
 <?php
 
-namespace ffan\dop\main;
+namespace Uis\Demo\Main;
+
+use FFan\Dop\DopEncode;
+use FFan\Dop\DopDecode;
+use FFan\Dop\Uis\IResponse;
 
 /**
- *  
- * @package ffan\dop\main
+ *  简单的测试
+ * @package Uis\Demo\Main
  */
-class IndexResponse
+class IndexResponse implements IResponse
 {
     /**
      * @var int 加
@@ -24,7 +28,7 @@ class IndexResponse
     public $multiply;
     
     /**
-     * @var int 除
+     * @var float 除
      */
     public $divide;
     
@@ -46,11 +50,97 @@ class IndexResponse
             $result['multiply'] = (int)$this->multiply;
         }
         if (null !== $this->divide) {
-            $result['divide'] = (int)$this->divide;
+            $result['divide'] = (float)$this->divide;
         }
         if ($empty_convert && empty($result)) {
             return new \stdClass();
         }
         return $result;
+    }
+    
+    /**
+     * 对象初始化
+     * @param array $data
+     */
+    public function arrayUnpack(array $data)
+    {
+        if (isset($data['plus'])) {
+            $this->plus = (int)$data['plus'];
+        }
+        if (isset($data['minus'])) {
+            $this->minus = (int)$data['minus'];
+        }
+        if (isset($data['multiply'])) {
+            $this->multiply = (int)$data['multiply'];
+        }
+        if (isset($data['divide'])) {
+            $this->divide = (float)$data['divide'];
+        }
+    }
+    
+    /**
+     * 二进制打包
+     * @param bool $pid 是否打包协议ID
+     * @param bool $sign 是否签名
+     * @param null|string $mask_key 加密字符
+     * @return string
+     */
+    public function binaryEncode($pid = false, $sign = false, $mask_key = null)
+    {
+        $result = new DopEncode;
+        if ($pid) {
+            $result->writePid('/mainIndexResponse');
+        }
+        if ($sign) {
+            $result->sign();
+        }
+        if (null !== $mask_key && is_string($mask_key)) {
+            $result->mask($mask_key);
+        }
+        $result->writeString(self::binaryStruct());
+        $result->writeInt($this->plus);
+        $result->writeInt($this->minus);
+        $result->writeInt($this->multiply);
+        $result->writeFloat($this->divide);
+        return $result->pack();
+    }
+    
+    /**
+     * 二进制解包
+     * @param DopDecode|string $data
+     * @param string|null $mask_key
+     * @return bool
+     */
+    public function binaryDecode($data, $mask_key = null)
+    {
+        $decoder = $data instanceof DopDecode ? $data : new DopDecode($data);
+        $data_arr = $decoder->unpack($mask_key);
+        if ($decoder->getErrorCode()) {
+            return false;
+        }
+        $this->arrayUnpack($data_arr);
+        return true;
+    }
+    
+    /**
+     * 生成二进制协议头
+     * @return String
+     */
+    public static function binaryStruct()
+    {
+        $byte_array = new DopEncode();
+        $byte_array->writeString('plus');
+        //int32
+        $byte_array->writeChar(0x42);
+        $byte_array->writeString('minus');
+        //int32
+        $byte_array->writeChar(0x42);
+        $byte_array->writeString('multiply');
+        //int32
+        $byte_array->writeChar(0x42);
+        $byte_array->writeString('divide');
+        //float
+        $byte_array->writeChar(0x3);
+        return $byte_array->dump();
     }
 }

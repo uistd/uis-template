@@ -1,11 +1,11 @@
 <?php
 
-namespace ffan\dop\plugin\mock\main;
+namespace Uis\Demo\Plugin\Mock\Main;
 
-use ffan\dop\main\IndexRequest;
-use ffan\dop\main\IndexResponse;
+use Uis\Demo\Main\IndexRequest;
+use Uis\Demo\Main\IndexResponse;
 
-class MockMain extends \ffan\dop\DopMock
+class MockMain extends \FFan\Dop\DopMock
 {
     
     /**
@@ -27,10 +27,10 @@ class MockMain extends \ffan\dop\DopMock
     public static function mockIndexResponse()
     {
         $data = new IndexResponse();
-        $data->plus = mt_rand(0, 100);
-        $data->minus = mt_rand(0, 100);
-        $data->multiply = mt_rand(0, 100);
-        $data->divide = mt_rand(0, 100);
+        $data->plus = mt_rand(1, 100);
+        $data->minus = mt_rand(1, 10);
+        $data->multiply = mt_rand(100, 1000);
+        $data->divide = self::floatRangeMock(0, 10);
         return $data;
     }
 }

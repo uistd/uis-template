@@ -14,7 +14,8 @@
     "php": ">=5.6.0",
     "ffan/dop-uis": "1.*",
     "ffan/dop": "2.*",
-    "ffan/php-dop": "2.*"
+    "ffan/php-dop": "2.*",
+    "ffan/std-tpl": "1.*"
   },
   "autoload": {
     "psr-4": {
