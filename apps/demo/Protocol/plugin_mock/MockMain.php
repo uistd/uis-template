@@ -1,9 +1,9 @@
 <?php
 
-namespace Uis\Demo\Plugin\Mock\Main;
+namespace Uis\Demo\Protocol\Plugin\Mock;
 
-use Uis\Demo\Main\IndexRequest;
-use Uis\Demo\Main\IndexResponse;
+use Uis\Demo\Protocol\Main\IndexRequest;
+use Uis\Demo\Protocol\Main\IndexResponse;
 
 class MockMain extends \FFan\Dop\DopMock
 {

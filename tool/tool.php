@@ -3,6 +3,7 @@
 use FFan\Dop\Manager;
 use FFan\Std\Common\Config as FFanConfig;
 use FFan\Std\Tpl\Tpl;
+chdir(__DIR__);
 
 require_once '../vendor/autoload.php';
 $app_name = isset($argv[1]) ? $argv[1] : 'demo';

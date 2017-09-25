@@ -1,8 +1,10 @@
 <?php
 
-namespace Uis\Demo\Main;
+namespace Uis\Demo\Page;
 
 use FFan\Dop\Uis\Page;
+use Uis\Demo\Protocol\Main\IndexRequest;
+use Uis\Demo\Protocol\Main\IndexResponse;
 
 class MainPage extends Page
 {

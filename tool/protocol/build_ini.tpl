@@ -2,7 +2,7 @@
 [build]
 note = 'UI service'
 ;生成类文件的命名空间前缀
-namespace = 'Uis\{{$u_app_name}}'
+namespace = 'Uis\{{$u_app_name}}\Protocol'
 ;coder 代码生成器
 coder = 'php'
 ;生成数据打包、解包方式
@@ -16,9 +16,12 @@ protocol_type = 'action'
 ;目录类型 runtime 或者 ROOT_PATH
 path_type = 'root'
 ;生成目录
-build_path = "apps/{{$app_name}}/protocol"
+build_path = "apps/{{$app_name}}/Protocol"
 plugin = 'all'
+shader = "*"
 ;继承的类
 property_name = 'underline'
+;不用生成dop.php
+no_autoload_file = true
 request_class_implements = "FFan\Dop\Uis\IResponse"
 response_class_implements = "FFan\Dop\Uis\IResponse"

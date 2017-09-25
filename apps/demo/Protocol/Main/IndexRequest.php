@@ -1,6 +1,6 @@
 <?php
 
-namespace Uis\Demo\Main;
+namespace Uis\Demo\Protocol\Main;
 
 use FFan\Dop\DopEncode;
 use FFan\Dop\DopDecode;
@@ -8,29 +8,24 @@ use FFan\Dop\Uis\IResponse;
 
 /**
  *  简单的测试
- * @package Uis\Demo\Main
+ * @package Uis\Demo\Protocol\Main
  */
-class IndexResponse implements IResponse
+class IndexRequest implements IResponse
 {
+
     /**
-     * @var int 加
+     * @var int
      */
-    public $plus;
+    public $a = 10;
+    /**
+     * @var int
+     */
+    public $b = 100;
     
     /**
-     * @var int 减
+     * @var string 数据有效性检查出错消息
      */
-    public $minus;
-    
-    /**
-     * @var int 乘
-     */
-    public $multiply;
-    
-    /**
-     * @var float 除
-     */
-    public $divide;
+    private $validate_error_msg;
     
     /**
      * 转成数组
@@ -40,17 +35,11 @@ class IndexResponse implements IResponse
     public function arrayPack($empty_convert = false)
     {
         $result = array();
-        if (null !== $this->plus) {
-            $result['plus'] = (int)$this->plus;
+        if (null !== $this->a) {
+            $result['a'] = (int)$this->a;
         }
-        if (null !== $this->minus) {
-            $result['minus'] = (int)$this->minus;
-        }
-        if (null !== $this->multiply) {
-            $result['multiply'] = (int)$this->multiply;
-        }
-        if (null !== $this->divide) {
-            $result['divide'] = (float)$this->divide;
+        if (null !== $this->b) {
+            $result['b'] = (int)$this->b;
         }
         if ($empty_convert && empty($result)) {
             return new \stdClass();
@@ -64,17 +53,11 @@ class IndexResponse implements IResponse
      */
     public function arrayUnpack(array $data)
     {
-        if (isset($data['plus'])) {
-            $this->plus = (int)$data['plus'];
+        if (isset($data['a'])) {
+            $this->a = (int)$data['a'];
         }
-        if (isset($data['minus'])) {
-            $this->minus = (int)$data['minus'];
-        }
-        if (isset($data['multiply'])) {
-            $this->multiply = (int)$data['multiply'];
-        }
-        if (isset($data['divide'])) {
-            $this->divide = (float)$data['divide'];
+        if (isset($data['b'])) {
+            $this->b = (int)$data['b'];
         }
     }
     
@@ -89,7 +72,7 @@ class IndexResponse implements IResponse
     {
         $result = new DopEncode;
         if ($pid) {
-            $result->writePid('/mainIndexResponse');
+            $result->writePid('/MainIndexRequest');
         }
         if ($sign) {
             $result->sign();
@@ -98,10 +81,8 @@ class IndexResponse implements IResponse
             $result->mask($mask_key);
         }
         $result->writeString(self::binaryStruct());
-        $result->writeInt($this->plus);
-        $result->writeInt($this->minus);
-        $result->writeInt($this->multiply);
-        $result->writeFloat($this->divide);
+        $result->writeInt($this->a);
+        $result->writeInt($this->b);
         return $result->pack();
     }
     
@@ -129,18 +110,42 @@ class IndexResponse implements IResponse
     public static function binaryStruct()
     {
         $byte_array = new DopEncode();
-        $byte_array->writeString('plus');
+        $byte_array->writeString('a');
         //int32
         $byte_array->writeChar(0x42);
-        $byte_array->writeString('minus');
+        $byte_array->writeString('b');
         //int32
         $byte_array->writeChar(0x42);
-        $byte_array->writeString('multiply');
-        //int32
-        $byte_array->writeChar(0x42);
-        $byte_array->writeString('divide');
-        //float
-        $byte_array->writeChar(0x3);
         return $byte_array->dump();
+    }
+    
+    /**
+     * 验证数据有效性
+     * @return bool
+     */
+    public function validateCheck()
+    {
+        if (null !== $this->a) {
+            if ($this->a < 1) {
+                $this->validate_error_msg = "最小值1";
+                return false;
+            }
+        }
+        if (null !== $this->b) {
+            if ($this->b < 1) {
+                $this->validate_error_msg = "最小值1";
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    /**
+     * 获取出错的消息
+     * @return string|null
+     */
+    public function getValidateErrorMsg()
+    {
+        return $this->validate_error_msg;
     }
 }

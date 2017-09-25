@@ -1,6 +1,6 @@
 <?php
 
-namespace Uis\Demo\Tool;
+namespace Uis\Demo\Page\Tool;
 
 use FFan\Dop\Uis\Page;
 
