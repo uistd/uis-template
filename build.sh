@@ -1,5 +1,5 @@
 #!/bin/env bash
-composer update || exit 1
+composer install || exit 1
 
 # 环境变量
 ENV=$1
