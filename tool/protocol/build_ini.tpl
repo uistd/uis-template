@@ -2,7 +2,7 @@
 [build]
 note = 'UI service'
 ;生成类文件的命名空间前缀
-namespace = 'Uis\{{$u_app_name}}\Protocol'
+namespace = 'Protocol/'
 ;coder 代码生成器
 coder = 'php'
 ;生成数据打包、解包方式
@@ -16,7 +16,7 @@ protocol_type = 'action'
 ;目录类型 runtime 或者 ROOT_PATH
 path_type = 'root'
 ;生成目录
-build_path = "apps/{{$app_name}}/Protocol"
+build_path = "protocol"
 plugin = 'all'
 shader = "*"
 ;继承的类

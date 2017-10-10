@@ -15,11 +15,13 @@
     "ffan/dop-uis": "1.*",
     "ffan/dop": "2.*",
     "ffan/php-dop": "2.*",
+    "ffan/cluster-redis": "1.*",
     "ffan/std-tpl": "1.*"
   },
   "autoload": {
     "psr-4": {
-      "FFan\\Uis\\Base\\": "base"
+      "FFan\\Uis\\Base\\": "base",
+      "Protocol\\": "protocol"
     }
   },
   "config": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Uis\Demo\Protocol\Main;
+namespace Protocol\Demo\Main;
 
 use FFan\Dop\DopEncode;
 use FFan\Dop\DopDecode;
@@ -8,7 +8,7 @@ use FFan\Dop\Uis\IResponse;
 
 /**
  *  简单的测试
- * @package Uis\Demo\Protocol\Main
+ * @package Protocol\Demo\Main
  */
 class IndexRequest implements IResponse
 {
@@ -72,7 +72,7 @@ class IndexRequest implements IResponse
     {
         $result = new DopEncode;
         if ($pid) {
-            $result->writePid('/MainIndexRequest');
+            $result->writePid('/demo/MainIndexRequest');
         }
         if ($sign) {
             $result->sign();

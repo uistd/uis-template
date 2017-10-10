@@ -1,11 +1,11 @@
 <?php
 
-namespace Uis\Demo\Protocol\Plugin\Mock;
+namespace Protocol\Plugin\Mock\Demo;
 
-use Uis\Demo\Protocol\Main\IndexRequest;
-use Uis\Demo\Protocol\Main\IndexResponse;
+use Protocol\Demo\Main\IndexRequest;
+use Protocol\Demo\Main\IndexResponse;
 
-class MockMain extends \FFan\Dop\DopMock
+class MockDemoMain extends \FFan\Dop\DopMock
 {
     
     /**

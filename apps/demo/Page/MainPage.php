@@ -3,8 +3,8 @@
 namespace Uis\Demo\Page;
 
 use FFan\Dop\Uis\Page;
-use Uis\Demo\Protocol\Main\IndexRequest;
-use Uis\Demo\Protocol\Main\IndexResponse;
+use Protocol\Demo\Main\IndexRequest;
+use Protocol\Demo\Main\IndexResponse;
 
 class MainPage extends Page
 {
