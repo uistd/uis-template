@@ -25,7 +25,7 @@ property_name = 'underline'
 ;不用生成dop.php
 no_autoload_file = true
 request_class_implements = "FFan\Dop\Uis\IRequest"
-response_class_implements = "FFan\Dop\Uis\Result"
+response_class_extends = "FFan\Dop\Uis\Result"
 
 [build:objc]
 request_class_suffix = 'form'

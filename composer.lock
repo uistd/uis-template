@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f0b59d1c53baa7f0a337f4aa6f75f4d",
+    "content-hash": "df542087153df56e0199bc14a08f4be7",
     "packages": [
         {
             "name": "ffan/cluster-redis",
@@ -61,16 +61,16 @@
         },
         {
             "name": "ffan/dop",
-            "version": "2.1.15",
+            "version": "2.1.16",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "3057ff255d034038f70fad83350facbe53be9cfc"
+                "reference": "afb38d63dc0327016d613a529bba60e45bbea038"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop/2.1.15.0/3057ff255d034038f70fad83350facbe53be9cfc.zip",
-                "reference": "3057ff255d034038f70fad83350facbe53be9cfc",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop/2.1.16.0/afb38d63dc0327016d613a529bba60e45bbea038.zip",
+                "reference": "afb38d63dc0327016d613a529bba60e45bbea038",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -111,20 +111,20 @@
                 "dop",
                 "ffan"
             ],
-            "time": "2017-11-20T11:58:18+00:00"
+            "time": "2017-11-20T15:25:49+00:00"
         },
         {
             "name": "ffan/dop-uis",
-            "version": "1.2.4",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/uis.git",
-                "reference": "32c7a3b17da0711a0d56b506801717234dc7607b"
+                "reference": "637f738896542ed9e4a9f733358c5fc28ee35bd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop-uis/1.2.4.0/32c7a3b17da0711a0d56b506801717234dc7607b.zip",
-                "reference": "32c7a3b17da0711a0d56b506801717234dc7607b",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop-uis/2.0.0.0/637f738896542ed9e4a9f733358c5fc28ee35bd7.zip",
+                "reference": "637f738896542ed9e4a9f733358c5fc28ee35bd7",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -164,7 +164,7 @@
                 "ffan",
                 "uis"
             ],
-            "time": "2017-11-13T09:15:16+00:00"
+            "time": "2017-11-20T12:07:16+00:00"
         },
         {
             "name": "ffan/php-dop",
@@ -684,16 +684,16 @@
         },
         {
             "name": "ffan/std-tpl",
-            "version": "1.1.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-tpl.git",
-                "reference": "39a7a639dbf3143dee49f9a78d2bf7e915c6c826"
+                "reference": "e76d29bdfcd1adb4f23656ba5627499affdc22d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-tpl/1.1.0.0/39a7a639dbf3143dee49f9a78d2bf7e915c6c826.zip",
-                "reference": "39a7a639dbf3143dee49f9a78d2bf7e915c6c826",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-tpl/1.1.2.0/e76d29bdfcd1adb4f23656ba5627499affdc22d6.zip",
+                "reference": "e76d29bdfcd1adb4f23656ba5627499affdc22d6",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -731,7 +731,7 @@
                 "php",
                 "tpl"
             ],
-            "time": "2017-11-20T09:52:42+00:00"
+            "time": "2017-11-20T15:23:19+00:00"
         }
     ],
     "packages-dev": [],

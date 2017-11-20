@@ -3,8 +3,8 @@
 namespace Uis\Demo\Page;
 
 use FFan\Dop\Uis\Page;
+use Protocol\Demo\Main\IndexData;
 use Protocol\Demo\Main\IndexRequest;
-use Protocol\Demo\Main\IndexResponse;
 
 class MainPage extends Page
 {
@@ -14,12 +14,11 @@ class MainPage extends Page
      */
     public function actionIndex(IndexRequest $request)
     {
-        $response = new IndexResponse();
-        $response->plus = $request->a + $request->b;
-        $response->minus = $request->b - $request->a;
-        $response->divide = $request->b / $request->a;
-        $response->multiply = $request->a * $request->b;
-        $this->response->setResponse($response);
-        $this->response->appendData('data', time());
+        $data = new IndexData();
+        $data->plus = $request->a + $request->b;
+        $data->minus = $request->b - $request->a;
+        $data->divide = $request->b / $request->a;
+        $data->multiply = $request->a * $request->b;
+        $this->response->setData($data);
     }
 }

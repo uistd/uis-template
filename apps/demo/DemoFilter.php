@@ -2,7 +2,6 @@
 
 namespace Uis\Demo;
 
-use FFan\Dop\Uis\Application;
 use FFan\Dop\Uis\Filter;
 use FFan\Std\Common\Ip;
 
@@ -23,6 +22,5 @@ class DemoFilter extends Filter
         if (!Ip::isInternal($ip)) {
             $this->setError(403, 'Access denied');
         }
-        Application::getInstance()->getResponse()->appendData('filter_msg', 'Access allowed');
     }
 }

@@ -10,7 +10,7 @@ use FFan\Dop\Uis\Result;
  *  简单的测试
  * @package Protocol\Demo\Main
  */
-class IndexResponse implements Result
+class IndexResponse extends Result
 {
 
     /**
