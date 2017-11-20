@@ -9,14 +9,16 @@
   ],
   "type": "project",
   "license": "BSD-3-Clause",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "require": {
     "php": ">=5.6.0",
     "ffan/dop-uis": "1.*",
     "ffan/dop": "2.*",
     "ffan/php-dop": "2.*",
     "ffan/cluster-redis": "1.*",
-    "ffan/std-tpl": "1.*"
+    "ffan/std-tpl": "1.*",
+    "ffan/std-mysql": "1.*",
+    "ffan/std-pubsub": "1.*"
   },
   "autoload": {
     "psr-4": {

@@ -4,31 +4,19 @@ namespace Protocol\Demo\Main;
 
 use FFan\Dop\DopEncode;
 use FFan\Dop\DopDecode;
-use FFan\Dop\Uis\IResponse;
+use FFan\Dop\Uis\Result;
 
 /**
  *  简单的测试
  * @package Protocol\Demo\Main
  */
-class IndexResponse implements IResponse
+class IndexResponse implements Result
 {
 
     /**
-     * @var int 加
+     * @var IndexData
      */
-    public $plus;
-    /**
-     * @var int 减
-     */
-    public $minus;
-    /**
-     * @var int 乘
-     */
-    public $multiply;
-    /**
-     * @var float 除
-     */
-    public $divide;
+    public $data;
     
     /**
      * 转成数组
@@ -38,17 +26,8 @@ class IndexResponse implements IResponse
     public function arrayPack($empty_convert = false)
     {
         $result = array();
-        if (null !== $this->plus) {
-            $result['plus'] = (int)$this->plus;
-        }
-        if (null !== $this->minus) {
-            $result['minus'] = (int)$this->minus;
-        }
-        if (null !== $this->multiply) {
-            $result['multiply'] = (int)$this->multiply;
-        }
-        if (null !== $this->divide) {
-            $result['divide'] = (float)$this->divide;
+        if (isset($this->data) && $this->data instanceof IndexData) {
+            $result['data'] = $this->data->arrayPack($empty_convert);
         }
         if ($empty_convert && empty($result)) {
             return new \stdClass();
@@ -62,17 +41,10 @@ class IndexResponse implements IResponse
      */
     public function arrayUnpack(array $data)
     {
-        if (isset($data['plus'])) {
-            $this->plus = (int)$data['plus'];
-        }
-        if (isset($data['minus'])) {
-            $this->minus = (int)$data['minus'];
-        }
-        if (isset($data['multiply'])) {
-            $this->multiply = (int)$data['multiply'];
-        }
-        if (isset($data['divide'])) {
-            $this->divide = (float)$data['divide'];
+        if (isset($data['data']) && is_array($data['data'])) {
+            $struct_data = new IndexData();
+            $struct_data->arrayUnpack($data['data']);
+            $this->data = $struct_data;
         }
     }
     
@@ -96,10 +68,12 @@ class IndexResponse implements IResponse
             $result->mask($mask_key);
         }
         $result->writeString(self::binaryStruct());
-        $result->writeInt($this->plus);
-        $result->writeInt($this->minus);
-        $result->writeInt($this->multiply);
-        $result->writeFloat($this->divide);
+        if (!$this->data instanceof IndexData ) {
+            $result->writeChar(0);
+        } else {
+            $result->writeChar(0xff);
+            $this->data->binaryPack($result);
+        }
         return $result->pack();
     }
     
@@ -127,18 +101,10 @@ class IndexResponse implements IResponse
     public static function binaryStruct()
     {
         $byte_array = new DopEncode();
-        $byte_array->writeString('plus');
-        //int32
-        $byte_array->writeChar(0x42);
-        $byte_array->writeString('minus');
-        //int32
-        $byte_array->writeChar(0x42);
-        $byte_array->writeString('multiply');
-        //int32
-        $byte_array->writeChar(0x42);
-        $byte_array->writeString('divide');
-        //float
-        $byte_array->writeChar(0x3);
+        $byte_array->writeString('data');
+        //struct
+        $byte_array->writeChar(0x6);
+        $byte_array->writeString(IndexData::binaryStruct());
         return $byte_array->dump();
     }
 }

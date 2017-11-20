@@ -10,18 +10,20 @@
             </int>
         </request>
         <response>
-            <int name="plus" note="加">
-                <plugin_mock range="1, 100"/>
-            </int>
-            <int name="minus" note="减">
-                <plugin_mock range="1, 10"/>
-            </int>
-            <int name="multiply" note="乘">
-                <plugin_mock range="100, 1000"/>
-            </int>
-            <float name="divide" note="除">
-                <plugin_mock range="0.1, 10"/>
-            </float>
+            <model name="data">
+                <int name="plus" note="加">
+                    <plugin_mock range="1, 100"/>
+                </int>
+                <int name="minus" note="减">
+                    <plugin_mock range="1, 10"/>
+                </int>
+                <int name="multiply" note="乘">
+                    <plugin_mock range="100, 1000"/>
+                </int>
+                <float name="divide" note="除">
+                    <plugin_mock range="0.1, 10"/>
+                </float>
+            </model>
         </response>
     </action>
 </protocol>
