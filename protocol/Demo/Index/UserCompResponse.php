@@ -1,20 +1,20 @@
 <?php
 
-namespace Protocol\Demo\Main;
+namespace Protocol\Demo\Index;
 
 use FFan\Dop\DopEncode;
 use FFan\Dop\DopDecode;
 use FFan\Dop\Uis\Result;
 
 /**
- *  简单的测试
- * @package Protocol\Demo\Main
+ *  根据puid获取用户信息的demo【兼容模式】
+ * @package Protocol\Demo\Index
  */
-class IndexResponse extends Result
+class UserCompResponse extends Result
 {
 
     /**
-     * @var IndexData
+     * @var UserCompData
      */
     public $data;
     
@@ -26,7 +26,7 @@ class IndexResponse extends Result
     public function arrayPack($empty_convert = false)
     {
         $result = array();
-        if (isset($this->data) && $this->data instanceof IndexData) {
+        if (isset($this->data) && $this->data instanceof UserCompData) {
             $result['data'] = $this->data->arrayPack($empty_convert);
         }
         if ($empty_convert && empty($result)) {
@@ -42,7 +42,7 @@ class IndexResponse extends Result
     public function arrayUnpack(array $data)
     {
         if (isset($data['data']) && is_array($data['data'])) {
-            $struct_data = new IndexData();
+            $struct_data = new UserCompData();
             $struct_data->arrayUnpack($data['data']);
             $this->data = $struct_data;
         }
@@ -59,7 +59,7 @@ class IndexResponse extends Result
     {
         $result = new DopEncode;
         if ($pid) {
-            $result->writePid('/demo/MainIndexResponse');
+            $result->writePid('/demo/indexUserCompResponse');
         }
         if ($sign) {
             $result->sign();
@@ -68,7 +68,7 @@ class IndexResponse extends Result
             $result->mask($mask_key);
         }
         $result->writeString(self::binaryStruct());
-        if (!$this->data instanceof IndexData ) {
+        if (!$this->data instanceof UserCompData ) {
             $result->writeChar(0);
         } else {
             $result->writeChar(0xff);
@@ -104,7 +104,7 @@ class IndexResponse extends Result
         $byte_array->writeString('data');
         //struct
         $byte_array->writeChar(0x6);
-        $byte_array->writeString(IndexData::binaryStruct());
+        $byte_array->writeString(UserCompData::binaryStruct());
         return $byte_array->dump();
     }
 }

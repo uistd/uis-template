@@ -1,14 +1,14 @@
 <?php
 
-namespace Protocol\Demo\Main;
+namespace Protocol\Demo\Index;
 
 use FFan\Dop\DopEncode;
 
 /**
  *  
- * @package Protocol\Demo\Main
+ * @package Protocol\Demo\Index
  */
-class IndexData
+class MainData
 {
 
     /**

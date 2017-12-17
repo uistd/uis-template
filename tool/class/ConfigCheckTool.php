@@ -15,9 +15,22 @@ class ConfigCheckTool extends Tool
      */
     public function action()
     {
+        if (isset($_GET['action']) && 'check' === $_GET['action']) {
+            $this->doCheck();
+        } else {
+            $this->tpl('config_check');
+        }
+    }
+
+    /**
+     * 检查
+     */
+    private function doCheck()
+    {
         $root_path = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR;
         $all_config = require($root_path . 'config/config.php');
         $result = array('开始检查 ');
+        $result[] = 'PHP version:' . phpversion();
         foreach ($all_config as $name => $value) {
             //如果 是mysql的配置
             if (0 === strpos($name, 'ffan-mysql:')) {
@@ -32,9 +45,18 @@ class ConfigCheckTool extends Tool
                 $result[] = $name . ' => ' . $this->checkClusterRedis($value);
             }
         }
-        $result[] = 'APC => ' . (extension_loaded('apc') ? 'loaded' : 'not found');
+        $result[] = $this->extensionCheck('apcu');
+        $result[] = $this->extensionCheck('mysqli');
+        $result[] = $this->extensionCheck('redis');
+        $result[] = $this->extensionCheck('igbinary');
+        $result[] = $this->extensionCheck('curl');
+        $result[] = $this->extensionCheck('qconf');
+        $result[] = $this->functionCheck('mb_strlen');
+        $result[] = $this->functionCheck('fsockopen');
+        $result[] = $this->functionCheck('stream_socket_client');
         $result[] = '检查完成';
-        die('<pre>' . join(PHP_EOL, $result) . '</pre>');
+        echo join('<br>', $result);
+        die();
     }
 
     /**
@@ -53,11 +75,12 @@ class ConfigCheckTool extends Tool
         $password = $conf['password'];
         $database = $conf['database'];
         $port = isset($conf['port']) ? $conf['port'] : 3306;
+        $msg = $user . '@' . $host . ':' . $port . '/' . $database . ' ';
         $link_obj = new \mysqli($host, $user, $password, $database, $port);
         if ($link_obj->connect_errno) {
-            return $link_obj->connect_error;
+            return $this->msg($msg . $link_obj->connect_error, true);
         }
-        return 'success';
+        return $this->msg($msg . 'success');
     }
 
     /**
@@ -68,14 +91,15 @@ class ConfigCheckTool extends Tool
     private function checkRedis($conf_arr)
     {
         if (!isset($conf_arr['host'], $conf_arr['port'])) {
-            return '缺少必要配置项';
+            return $this->msg('缺少必要配置项', true);
         }
         $redis = new \Redis();
+        $msg = $conf_arr['host'] . ':' . $conf_arr['port'];
         $ret = $redis->connect($conf_arr['host'], $conf_arr['port'], 3);
         if ($ret) {
-            return 'success';
+            return $this->msg($msg . ' success');
         } else {
-            return 'FAILED';
+            return $this->msg($msg . ' failed', true);
         }
     }
 
@@ -98,6 +122,65 @@ class ConfigCheckTool extends Tool
             }
             $result[] = '节点[' . $i . '] => ' . $this->checkRedis($conf);
         }
-        return join(PHP_EOL, $result);
+        return join('<br>', $result);
+    }
+
+    /**
+     * @param string $msg
+     * @param bool $is_error
+     * @return string
+     */
+    private function msg($msg, $is_error = false)
+    {
+        $css = $is_error ? 'red' : 'green';
+        return '<span class="' . $css . '">' . $msg . '</span>';
+    }
+
+    /**
+     * 函数检查
+     * @param string $func_name
+     * @return string
+     */
+    private function functionCheck($func_name)
+    {
+        $re_str = 'function ' . $func_name . ' ';
+        if (function_exists($func_name)) {
+            $re_str .= $this->msg('exist');
+        } else {
+            $re_str .= $this->msg('NOT exist', true);
+        }
+        return $re_str;
+    }
+
+    /**
+     * 扩展检查
+     * @param string $extension
+     * @return string
+     */
+    private function extensionCheck($extension)
+    {
+        $re_str = 'Extension ' . $extension . ' ';
+        if (extension_loaded($extension)) {
+            $re_str .= $this->msg('loaded');
+        } else {
+            $re_str .= $this->msg('NOT loaded', true);
+        }
+        return $re_str;
+    }
+
+    /**
+     * 类检查
+     * @param string $class_name
+     * @return string
+     */
+    private function classCheck($class_name)
+    {
+        $re_str = 'Class ' . $class_name . ' ';
+        if (class_exists($class_name)) {
+            $re_str .= $this->msg('loaded');
+        } else {
+            $re_str .= $this->msg('NOT loaded', true);
+        }
+        return $re_str;
     }
 }

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol>
+    <model name="user_detail">
+        <uint name="verify"/>
+        <string name="liveCity"/>
+        <string name="education"/>
+        <int name="creditStatus"/>
+        <string name="cardNo"/>
+        <list name="uids">
+            <model name="uid_model">
+                <string name="bizId"/>
+                <uint name="bizType"/>
+                <int64 name="createTime"/>
+                <string name="mobile"/>
+                <string name="puid"/>
+                <uint name="relation"/>
+                <uint name="status"/>
+                <string name="uid"/>
+                <int64 name="updateTime"/>
+                <uint name="version"/>
+            </model>
+        </list>
+        <string name="nickName"/>
+        <uint name="gender"/>
+        <string name="merchantId"/>
+        <string name="bizId"/>
+        <string name="puid"/>
+        <string name="plazaId"/>
+        <uint name="status"/>
+        <string name="promotionFrom"/>
+        <uint name="pwdType"/>
+        <string name="promoterType"/>
+        <string name="realName"/>
+        <string name="headPortrait"/>
+        <string name="channel"/>
+        <string name="storeId"/>
+        <string name="mobile"/>
+    </model>
+    <model name="sub_user_detail">
+        <string name="bizId"/>
+        <uint name="bizType"/>
+        <string name="cardNo"/>
+        <string name="createTime"/>
+        <uint name="growthValue"/>
+        <uint name="memberGrade"/>
+        <string name="plazaId"/>
+        <uint name="status"/>
+        <string name="uid"/>
+    </model>
+    <action name="getUser" note="获取用户信息">
+        <request uri="userplatform/v1/users">
+            <string name="keyword"/>
+            <uint8 name="keywordType" default="0"/>
+            <string name="appid" default="crm"/>
+        </request>
+        <response extend="/api/result">
+            <model name="data" extend="user_detail"></model>
+        </response>
+    </action>
+    <action name="checkTokenByPuid" note="验证用户登录">
+        <request uri="userplatform/v1/users/{puid}/checkTokenByPuid">
+            <string name="ploginToken"/>
+            <string name="appid" default="feifan"/>
+            <string name="puid"/>
+        </request>
+    </action>
+
+    <action name="get/batch/key" note="批量查询用户信息">
+        <request uri="userplatform/v1/uplatemember/batchKey">
+            <string name="resultStr" note="需要返回的字段 多个用,隔开"></string>
+            <string name="key" note="关键字 多个用,隔开"></string>
+            <!-- type == 2 是通过手机号查询 -->
+            <string name="type" default="2" note="key 的类型"></string>
+            <string name="__uni_source" default="5.01" keep_name="1" note=""></string>
+        </request>
+
+        <response extend="/api/result">
+            <list name="data">
+                <model extend="user_detail"></model>
+            </list>
+        </response>
+    </action>
+
+    <action name="get/user/subInfo" note="获取子系统用户信息">
+        <request uri="userplatform/v1/users/subinfo">
+            <string name="puid" note="puid"/>
+            <string name="bizIds" note="企业ID"/>
+            <string name="appid" note="appid" default="crm"/>
+        </request>
+        <response extend="/api/result">
+            <list name="data">
+                <model extend="sub_user_detail"/>
+            </list>
+        </response>
+    </action>
+
+    <action name="get/puid/by/uid" note="根据uid查puid">
+        <request uri="userplatform/v1/users/puid">
+            <string name="uid" note="uid"/>
+            <string name="bizId" default="10001" note="企业ID"/>
+            <string name="appid" note="appid" default="crm"/>
+        </request>
+        <response extend="/api/result">
+            <model name="data" class_name="user_basic">
+                <string name="mobile"/>
+                <string name="puid"/>
+                <string name="uid"/>
+            </model>
+        </response>
+    </action>
+</protocol>

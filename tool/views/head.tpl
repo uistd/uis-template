@@ -25,6 +25,15 @@
     .hide {
         display: none;
     }
+    .cen {
+        text-align:center;
+    }
+    .red{
+        color:red;
+    }
+    .green{
+        color:green;
+    }
     caption{
         text-align:left;
         font-size:14px;

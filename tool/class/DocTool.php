@@ -7,6 +7,7 @@ use FFan\Dop\Plugin\Valid\ValidRule;
 use FFan\Dop\Protocol\Item;
 use FFan\Dop\Protocol\ItemType;
 use FFan\Dop\Protocol\ListItem;
+use FFan\Dop\Protocol\MapItem;
 use FFan\Dop\Protocol\Struct;
 use FFan\Dop\Protocol\StructItem;
 use FFan\Dop\Uis\Application;
@@ -49,10 +50,7 @@ class DocTool extends Tool
     public function __construct(Application $app)
     {
         parent::__construct($app);
-        Config::add('ffan-tpl', array(
-            'tpl_dir' => 'tool/views'
-        ));
-        $this->protocol_dir = ROOT_PATH . 'tool/protocol';
+        $this->protocol_dir = ROOT_PATH . 'tool/protocol/xml';
     }
 
     /**
@@ -286,6 +284,9 @@ class DocTool extends Tool
         } elseif (ItemType::ARR === $type) {
             /** @var ListItem $item */
             $this->requireItem($item->getItem());
+        } elseif (ItemType::MAP === $type) {
+            /** @var MapItem $item */
+            $this->requireItem($item->getValueItem());
         }
     }
 
@@ -358,6 +359,11 @@ class DocTool extends Tool
                 $class_name = $this->formatPath($struct->getFullName());
                 $href_name = str_replace('/', '_', $class_name);
                 return '<a href="#' . $href_name . '">#' . substr($class_name, 1) . '</a>';
+            case ItemType::MAP:
+                /** @var MapItem $item */
+                $key = $item->getKeyItem();
+                $value = $item->getValueItem();
+                return '&lt;'. $this->typeName($key) .', '. $this->typeName($value) .'&gt;';
         }
         return 'UNKNOWN';
     }
@@ -392,6 +398,9 @@ class DocTool extends Tool
             $desc[] = '自动去除html标签';
         } elseif ($rule->is_html_special_chars) {
             $desc[] = 'html标签自动转义';
+        }
+        if (!empty($rule->sets)) {
+            $desc[] = '<span class="red">只允许['.join(', ', $rule->sets).']</span>';
         }
         if (!empty($rule->min_str_len) || !empty($rule->max_str_len)) {
             $len_type = array(1 => 'UTF-8长度计算方式', 2 => '中文占2长度', 3 => '中英文字符均占1长度');

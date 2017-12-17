@@ -23,7 +23,9 @@
   "autoload": {
     "psr-4": {
       "FFan\\Uis\\Base\\": "base",
-      "Protocol\\": "protocol"
+      "Protocol\\": "protocol",
+      "Sdk\\": "sdk",
+      "Dao\\" : "dao"
     }
   },
   "config": {

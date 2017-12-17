@@ -61,16 +61,16 @@
         },
         {
             "name": "ffan/dop",
-            "version": "2.1.20",
+            "version": "2.5.1",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "ead68aee4086631216780c020467cd3c757b3424"
+                "reference": "0a912e97b2069743a82ace723d0e52e80272827b"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop/2.1.20.0/ead68aee4086631216780c020467cd3c757b3424.zip",
-                "reference": "ead68aee4086631216780c020467cd3c757b3424",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop/2.5.1.0/0a912e97b2069743a82ace723d0e52e80272827b.zip",
+                "reference": "0a912e97b2069743a82ace723d0e52e80272827b",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -112,20 +112,20 @@
                 "dop",
                 "ffan"
             ],
-            "time": "2017-11-24T08:09:05+00:00"
+            "time": "2017-12-17T12:07:49+00:00"
         },
         {
             "name": "ffan/dop-uis",
-            "version": "2.0.4",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/uis.git",
-                "reference": "f45b81398dd3e875c6d84b0c05be6668870ad442"
+                "reference": "064e13510aaa183a87461d378e3f2cb1dc428ce2"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop-uis/2.0.4.0/f45b81398dd3e875c6d84b0c05be6668870ad442.zip",
-                "reference": "f45b81398dd3e875c6d84b0c05be6668870ad442",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop-uis/2.1.5.0/064e13510aaa183a87461d378e3f2cb1dc428ce2.zip",
+                "reference": "064e13510aaa183a87461d378e3f2cb1dc428ce2",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -137,7 +137,7 @@
             "require": {
                 "ffan/php-dop": "2.*",
                 "ffan/std-async": "1.*",
-                "ffan/std-cache": "1.*",
+                "ffan/std-cache": "2.*",
                 "ffan/std-common": "2.*",
                 "ffan/std-console": "1.*",
                 "ffan/std-event": "2.*",
@@ -162,7 +162,7 @@
                 "ffan",
                 "uis"
             ],
-            "time": "2017-11-27T06:10:56+00:00"
+            "time": "2017-12-15T06:32:41+00:00"
         },
         {
             "name": "ffan/php-dop",
@@ -211,16 +211,16 @@
         },
         {
             "name": "ffan/std-async",
-            "version": "1.0.1",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/async.git",
-                "reference": "76f3c270f3d9ab94f2eab7751ee433d31b891ac9"
+                "reference": "0c6ea861285def27d3c8f1e3c0ac4d1476ff6826"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-async/1.0.1.0/76f3c270f3d9ab94f2eab7751ee433d31b891ac9.zip",
-                "reference": "76f3c270f3d9ab94f2eab7751ee433d31b891ac9",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-async/1.0.3.0/0c6ea861285def27d3c8f1e3c0ac4d1476ff6826.zip",
+                "reference": "0c6ea861285def27d3c8f1e3c0ac4d1476ff6826",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -259,20 +259,20 @@
                 "ffan",
                 "php"
             ],
-            "time": "2017-09-06T06:28:50+00:00"
+            "time": "2017-12-13T11:35:40+00:00"
         },
         {
             "name": "ffan/std-cache",
-            "version": "1.0.4",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-cache.git",
-                "reference": "12127fb1f59de5515bc72476d916f8d6f58f8b2e"
+                "reference": "b798f95807db621eb893f3d10cbc848ace4a0112"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-cache/1.0.4.0/12127fb1f59de5515bc72476d916f8d6f58f8b2e.zip",
-                "reference": "12127fb1f59de5515bc72476d916f8d6f58f8b2e",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-cache/2.1.1.0/b798f95807db621eb893f3d10cbc848ace4a0112.zip",
+                "reference": "b798f95807db621eb893f3d10cbc848ace4a0112",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -313,20 +313,20 @@
                 "ffan",
                 "std"
             ],
-            "time": "2017-11-20T08:57:06+00:00"
+            "time": "2017-12-13T11:38:09+00:00"
         },
         {
             "name": "ffan/std-common",
-            "version": "2.0.7",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-utils.git",
-                "reference": "31278b5db30387b0c7424229d9dacc9759298b5f"
+                "reference": "e9885aa0e9c95f09ddfda123535fa6763966e79d"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-common/2.0.7.0/31278b5db30387b0c7424229d9dacc9759298b5f.zip",
-                "reference": "31278b5db30387b0c7424229d9dacc9759298b5f",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-common/2.1.6.0/e9885aa0e9c95f09ddfda123535fa6763966e79d.zip",
+                "reference": "e9885aa0e9c95f09ddfda123535fa6763966e79d",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -364,20 +364,20 @@
                 "php",
                 "utils"
             ],
-            "time": "2017-11-16T05:44:50+00:00"
+            "time": "2017-12-15T06:47:48+00:00"
         },
         {
             "name": "ffan/std-console",
-            "version": "1.1.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/console.git",
-                "reference": "c60cc45d20925d11c93d8dec770d7f84eebcb514"
+                "reference": "5276724c22b0cdb046c94d656b6e6356283ac9f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-console/1.1.0.0/c60cc45d20925d11c93d8dec770d7f84eebcb514.zip",
-                "reference": "c60cc45d20925d11c93d8dec770d7f84eebcb514",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-console/1.2.1.0/5276724c22b0cdb046c94d656b6e6356283ac9f5.zip",
+                "reference": "5276724c22b0cdb046c94d656b6e6356283ac9f5",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -419,20 +419,20 @@
                 "console",
                 "ffan"
             ],
-            "time": "2017-11-23T11:15:56+00:00"
+            "time": "2017-12-13T11:37:03+00:00"
         },
         {
             "name": "ffan/std-event",
-            "version": "2.0.3",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-event.git",
-                "reference": "dc029740332cc8b4995a252abe2dd75f608bfd85"
+                "reference": "e406c15989a4c79de7bc06df4e9522ecc57d1d7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-event/2.0.3.0/dc029740332cc8b4995a252abe2dd75f608bfd85.zip",
-                "reference": "dc029740332cc8b4995a252abe2dd75f608bfd85",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-event/2.1.0.0/e406c15989a4c79de7bc06df4e9522ecc57d1d7d.zip",
+                "reference": "e406c15989a4c79de7bc06df4e9522ecc57d1d7d",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -469,20 +469,20 @@
                 "ffan",
                 "std"
             ],
-            "time": "2017-11-23T05:50:52+00:00"
+            "time": "2017-12-13T11:39:12+00:00"
         },
         {
             "name": "ffan/std-git",
-            "version": "1.0.1",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/git.git",
-                "reference": "1c79292379866dd5ffb5e8d8184efc59a5f851fe"
+                "reference": "3e163785955139edfabedc118a0af38400a23ac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-git/1.0.1.0/1c79292379866dd5ffb5e8d8184efc59a5f851fe.zip",
-                "reference": "1c79292379866dd5ffb5e8d8184efc59a5f851fe",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-git/1.1.1.0/3e163785955139edfabedc118a0af38400a23ac3.zip",
+                "reference": "3e163785955139edfabedc118a0af38400a23ac3",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -521,20 +521,20 @@
                 "git",
                 "php"
             ],
-            "time": "2017-09-02T09:50:06+00:00"
+            "time": "2017-12-13T11:40:19+00:00"
         },
         {
             "name": "ffan/std-http",
-            "version": "1.0.13",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-http.git",
-                "reference": "87e5d77dd676267939b80e2aabb0745fb9fe7e5a"
+                "reference": "5f384953f5151b7226413a0b935f011adb2589a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-http/1.0.13.0/87e5d77dd676267939b80e2aabb0745fb9fe7e5a.zip",
-                "reference": "87e5d77dd676267939b80e2aabb0745fb9fe7e5a",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-http/1.1.1.0/5f384953f5151b7226413a0b935f011adb2589a7.zip",
+                "reference": "5f384953f5151b7226413a0b935f011adb2589a7",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -575,20 +575,20 @@
                 "http",
                 "php"
             ],
-            "time": "2017-11-25T07:20:56+00:00"
+            "time": "2017-12-15T15:37:28+00:00"
         },
         {
             "name": "ffan/std-logger",
-            "version": "1.0.8",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/logger.git",
-                "reference": "9a027d2251dbf80073d1bcaa39341836d01a686e"
+                "reference": "c0f2bd28e825d0e3aac7b1722280a1936dcda559"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-logger/1.0.8.0/9a027d2251dbf80073d1bcaa39341836d01a686e.zip",
-                "reference": "9a027d2251dbf80073d1bcaa39341836d01a686e",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-logger/1.2.4.0/c0f2bd28e825d0e3aac7b1722280a1936dcda559.zip",
+                "reference": "c0f2bd28e825d0e3aac7b1722280a1936dcda559",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -626,20 +626,20 @@
                 "ffan",
                 "logger"
             ],
-            "time": "2017-11-16T05:47:26+00:00"
+            "time": "2017-12-14T08:06:54+00:00"
         },
         {
             "name": "ffan/std-mysql",
-            "version": "1.0.4",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-mysql.git",
-                "reference": "8c8365d91e888c9bc41bf61fcc251115258e5272"
+                "reference": "71ac57ffced06995c82ca0cd91d10752235cf779"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-mysql/1.0.4.0/8c8365d91e888c9bc41bf61fcc251115258e5272.zip",
-                "reference": "8c8365d91e888c9bc41bf61fcc251115258e5272",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-mysql/1.1.0.0/71ac57ffced06995c82ca0cd91d10752235cf779.zip",
+                "reference": "71ac57ffced06995c82ca0cd91d10752235cf779",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -681,20 +681,20 @@
                 "mysql",
                 "php"
             ],
-            "time": "2017-11-14T09:36:15+00:00"
+            "time": "2017-12-13T11:07:16+00:00"
         },
         {
             "name": "ffan/std-pubsub",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/pubsub.git",
-                "reference": "749501cc443f909e863c52e455be3f0669eb2568"
+                "reference": "0f4b976972c01b243c3894b034585c8bd78533dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-pubsub/1.0.1.0/749501cc443f909e863c52e455be3f0669eb2568.zip",
-                "reference": "749501cc443f909e863c52e455be3f0669eb2568",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-pubsub/1.1.0.0/0f4b976972c01b243c3894b034585c8bd78533dd.zip",
+                "reference": "0f4b976972c01b243c3894b034585c8bd78533dd",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -734,20 +734,20 @@
                 "php",
                 "pubsub"
             ],
-            "time": "2017-11-15T02:07:31+00:00"
+            "time": "2017-12-13T11:47:43+00:00"
         },
         {
             "name": "ffan/std-tpl",
-            "version": "1.1.2",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-tpl.git",
-                "reference": "e76d29bdfcd1adb4f23656ba5627499affdc22d6"
+                "reference": "fe9fe1724289b2ec84e9b799e6d25ea5777cf3bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-tpl/1.1.2.0/e76d29bdfcd1adb4f23656ba5627499affdc22d6.zip",
-                "reference": "e76d29bdfcd1adb4f23656ba5627499affdc22d6",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-tpl/1.1.4.0/fe9fe1724289b2ec84e9b799e6d25ea5777cf3bf.zip",
+                "reference": "fe9fe1724289b2ec84e9b799e6d25ea5777cf3bf",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -785,7 +785,7 @@
                 "php",
                 "tpl"
             ],
-            "time": "2017-11-20T15:23:19+00:00"
+            "time": "2017-12-13T11:10:23+00:00"
         }
     ],
     "packages-dev": [],

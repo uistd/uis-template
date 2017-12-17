@@ -1,14 +1,14 @@
 <?php
 
-namespace Protocol\Demo\Main;
+namespace Protocol\Demo\Index;
 
 use FFan\Dop\Uis\IRequest;
 
 /**
  *  简单的测试
- * @package Protocol\Demo\Main
+ * @package Protocol\Demo\Index
  */
-class IndexRequest implements IRequest
+class MainRequest implements IRequest
 {
 
     /**
@@ -66,13 +66,13 @@ class IndexRequest implements IRequest
     public function validateCheck()
     {
         if (null !== $this->a) {
-            if ($this->a < 1) {
+            if ($this->a < -0x80000000 || $this->a > 0x7fffffff) {
                 $this->validate_error_msg = "最小值1";
                 return false;
             }
         }
         if (null !== $this->b) {
-            if ($this->b < 1) {
+            if ($this->b < -0x80000000 || $this->b > 0x7fffffff) {
                 $this->validate_error_msg = "最小值1";
                 return false;
             }

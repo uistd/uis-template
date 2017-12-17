@@ -28,23 +28,26 @@ request_class_implements = "FFan\Dop\Uis\IRequest"
 response_class_extends = "FFan\Dop\Uis\Result"
 
 [build:objc]
-request_class_suffix = 'form'
 response_class_suffix = 'model'
 struct_class_suffix = 'model'
 note = 'IOS客户端'
-packer = 'dictionary'
+packer = 'dictionary,objc_uri'
 code_side = 'client'
 protocol_type = 'action'
 ;生成目录
 build_path = "objc"
 class_prefix = "PG"
-ignore_get = 1
+;ignore_get = 1
 shader = "*"
-path_type = 'root'
 ;生成目录
 build_path = "tool/objc"
 ;忽略版本号
 ignore_version = 1
 ;不生成 生活家活动的代码
 exclude_file = 'feed/life_star.xml'
-ignore_response_model = 1
+ignore_response_main_model = 1
+request_class_implements = "PGRequestProtocol"
+[git:objc]
+url = 'ssh://git@gitlab.ffan.biz:8022/model/feed.git'
+username = doptool
+email = '18844626@qq.com'

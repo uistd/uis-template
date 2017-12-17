@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol>
+    <action name="main" note="简单的测试">
+        <request>
+            <int name="a" default="10">
+                <valid range="1," range-msg="最小值1"/>
+            </int>
+            <int name="b" default="100">
+                <valid range="1," range-msg="最小值1"/>
+            </int>
+        </request>
+        <response>
+            <model name="data">
+                <int name="plus" note="加">
+                    <mock range="1, 100"/>
+                </int>
+                <int name="minus" note="减">
+                    <mock range="1, 10"/>
+                </int>
+                <int name="multiply" note="乘">
+                    <mock range="100, 1000"/>
+                </int>
+                <float name="divide" note="除">
+                    <mock range="0.1, 10"/>
+                </float>
+            </model>
+        </response>
+    </action>
+
+    <action name="user" note="根据puid获取用户信息的demo【严格模式】">
+        <request>
+            <string name="puid">
+                <!-- 详细描述参数错误 -->
+                <valid require="1" format="md5" require-msg="puid必须填写" format-msg="puid格式错误"/>
+                <!-- 也可以只写msg
+                <valid require="1" format="md5" msg="puid参数错误"/>
+                -->
+                <!-- 还也可以不写msg 如果出错， 错误消息就是： Invalid `puid`
+                <valid require="1" format="md5"/>
+                -->
+            </string>
+        </request>
+        <response>
+            <model name="data">
+                <string name="nick_name" note="昵称"/>
+                <uint name="gender" note="男女"/>
+                <string name="avatar" note="头像"/>
+                <string name="mobile" note="手机号"/>
+            </model>
+        </response>
+    </action>
+
+    <action name="user/comp" note="根据puid获取用户信息的demo【兼容模式】">
+        <request>
+            <string name="puid">
+                <valid require="1"/>
+            </string>
+        </request>
+        <response>
+            <model name="data">
+                <string name="nick_name" note="昵称"/>
+                <uint name="gender" note="男女"/>
+                <string name="avatar" note="头像"/>
+                <string name="mobile" note="手机号"/>
+            </model>
+        </response>
+    </action>
+    
+</protocol>
