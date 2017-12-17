@@ -61,16 +61,16 @@
         },
         {
             "name": "ffan/dop",
-            "version": "2.5.1",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "0a912e97b2069743a82ace723d0e52e80272827b"
+                "reference": "e24d9b22c80eedc76303edf8f2ec80daa8434832"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop/2.5.1.0/0a912e97b2069743a82ace723d0e52e80272827b.zip",
-                "reference": "0a912e97b2069743a82ace723d0e52e80272827b",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop/2.5.2.0/e24d9b22c80eedc76303edf8f2ec80daa8434832.zip",
+                "reference": "e24d9b22c80eedc76303edf8f2ec80daa8434832",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -112,20 +112,20 @@
                 "dop",
                 "ffan"
             ],
-            "time": "2017-12-17T12:07:49+00:00"
+            "time": "2017-12-17T15:30:45+00:00"
         },
         {
             "name": "ffan/dop-uis",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/uis.git",
-                "reference": "064e13510aaa183a87461d378e3f2cb1dc428ce2"
+                "reference": "cddeb684f3f13d84165fbd6ddf6fd27a95adcffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop-uis/2.1.5.0/064e13510aaa183a87461d378e3f2cb1dc428ce2.zip",
-                "reference": "064e13510aaa183a87461d378e3f2cb1dc428ce2",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop-uis/2.1.6.0/cddeb684f3f13d84165fbd6ddf6fd27a95adcffd.zip",
+                "reference": "cddeb684f3f13d84165fbd6ddf6fd27a95adcffd",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -162,7 +162,7 @@
                 "ffan",
                 "uis"
             ],
-            "time": "2017-12-15T06:32:41+00:00"
+            "time": "2017-12-17T14:20:32+00:00"
         },
         {
             "name": "ffan/php-dop",
