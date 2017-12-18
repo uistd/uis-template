@@ -1,8 +1,8 @@
 {
-  "name": "uistd/dop-uis-template",
+  "name": "uistd/uis-template",
   "description": "FFan Dop UIService Basic Template. composer create-project uis/dop-uis-template uis_template dev-master",
   "keywords": [
-    "ffan",
+    "ui service",
     "dop",
     "uis",
     "project template"
@@ -16,8 +16,7 @@
     "uistd/dop": "3.*",
     "uistd/php-dop": "3.*",
     "uistd/tpl": "2.*",
-    "uistd/mysql": "2.*",
-    "uistd/pubsub": "2.*"
+    "uistd/mysql": "2.*"
   },
   "autoload": {
     "psr-4": {
