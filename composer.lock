@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6e32fd5e298c744b96a1b3402ddf0ef",
+    "content-hash": "393bb1dbc79442a5c7bc9460fedd1671",
     "packages": [
         {
             "name": "uistd/async",
@@ -220,16 +220,16 @@
         },
         {
             "name": "uistd/dop",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "41453b5abd4e65f61f0bc3417240e79dfee0c96d"
+                "reference": "87c75ba993a0a96554acc92b6a8132489a714ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.2.0/41453b5abd4e65f61f0bc3417240e79dfee0c96d.zip",
-                "reference": "41453b5abd4e65f61f0bc3417240e79dfee0c96d",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.3.0/87c75ba993a0a96554acc92b6a8132489a714ab1.zip",
+                "reference": "87c75ba993a0a96554acc92b6a8132489a714ab1",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -272,20 +272,20 @@
                 "ui service",
                 "uistd"
             ],
-            "time": "2017-12-18T08:41:36+00:00"
+            "time": "2017-12-18T08:47:29+00:00"
         },
         {
             "name": "uistd/dop-uis",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/uis.git",
-                "reference": "11ee114c908ada2d564e2fac407636b17ad1ab90"
+                "reference": "484ef86d4b9e776ef2e515089e7b4abdd0ede0e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop-uis/3.0.1.0/11ee114c908ada2d564e2fac407636b17ad1ab90.zip",
-                "reference": "11ee114c908ada2d564e2fac407636b17ad1ab90",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop-uis/3.0.2.0/484ef86d4b9e776ef2e515089e7b4abdd0ede0e3.zip",
+                "reference": "484ef86d4b9e776ef2e515089e7b4abdd0ede0e3",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -322,7 +322,7 @@
                 "ui service",
                 "uis"
             ],
-            "time": "2017-12-18T08:32:17+00:00"
+            "time": "2017-12-18T08:59:44+00:00"
         },
         {
             "name": "uistd/event",
@@ -632,59 +632,6 @@
                 "ui service"
             ],
             "time": "2017-12-18T08:28:27+00:00"
-        },
-        {
-            "name": "uistd/pubsub",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "http://gitlab.ffan.biz/php/pubsub.git",
-                "reference": "7fe13de9be019a8eacc73d895f0a3de459288d81"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/pubsub/2.0.0.0/7fe13de9be019a8eacc73d895f0a3de459288d81.zip",
-                "reference": "7fe13de9be019a8eacc73d895f0a3de459288d81",
-                "shasum": null,
-                "mirrors": [
-                    {
-                        "url": "http://composer.intra.ffan.com/repo/private/dists/%package%/%version%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "archive": {
-                "exclude": [
-                    "test",
-                    ".gitignore"
-                ]
-            },
-            "require": {
-                "php": ">=5.5.0",
-                "uistd/common": "3.*",
-                "uistd/console": "2.*",
-                "uistd/logger": "2.*"
-            },
-            "type": "composer",
-            "autoload": {
-                "psr-4": {
-                    "UiStd\\PubSub\\": "src"
-                }
-            },
-            "authors": [
-                {
-                    "name": "huangshunzhao",
-                    "email": "huangshunzhao@wanda.cn",
-                    "role": "Founder and project lead"
-                }
-            ],
-            "description": "FFan pubsub components",
-            "keywords": [
-                "ffan",
-                "php",
-                "pubsub"
-            ],
-            "time": "2017-12-18T04:15:29+00:00"
         },
         {
             "name": "uistd/tpl",
