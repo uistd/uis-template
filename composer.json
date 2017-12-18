@@ -1,6 +1,6 @@
 {
   "name": "uistd/uis-template",
-  "description": "FFan Dop UIService Basic Template. composer create-project uis/dop-uis-template uis_template dev-master",
+  "description": "FFan Dop UIService Basic Template. composer create-project uistd/uis-template uis_template dev-master",
   "keywords": [
     "ui service",
     "dop",
