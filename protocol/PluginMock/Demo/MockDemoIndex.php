@@ -12,7 +12,7 @@ use Protocol\Demo\Index\UserCompRequest;
 use Protocol\Demo\Index\UserCompData;
 use Protocol\Demo\Index\UserCompResponse;
 
-class MockDemoIndex extends \FFan\Dop\DopMock
+class MockDemoIndex extends \UiStd\DopLib\DopMock
 {
     
     /**
@@ -96,7 +96,6 @@ class MockDemoIndex extends \FFan\Dop\DopMock
     {
         $data = new UserCompRequest();
         $data->puid = self::strRangeMock(5, 20);
-        $data->a = mt_rand(0, 100);
         return $data;
     }
     

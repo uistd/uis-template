@@ -1,21 +1,21 @@
 <?php
 
-use FFan\Dop\Manager;
-use FFan\Std\Common\Config as FFanConfig;
-use FFan\Std\Tpl\Tpl;
+use UiStd\Dop\Manager;
+use UiStd\Common\Config as FFanConfig;
+use UiStd\Tpl\Tpl;
 
 define('ROOT_PATH', dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);
 chdir(__DIR__);
 
 require_once ROOT_PATH . 'vendor/autoload.php';
-require_once ROOT_PATH . 'vendor/ffan/dop/tool/GitHelper.php';
+require_once ROOT_PATH . 'vendor/uistd/dop/tool/GitHelper.php';
 
 $build_name = isset($argv[1]) ? $argv[1] : 'main';
 
 FFanConfig::addArray(array(
         'env' => 'dev',
         'runtime_path' => dirname(dirname(__DIR__)) . '/runtime',
-        'ffan-tpl' => array('tpl_dir' => 'tool/protocol')
+        'uis-tpl' => array('tpl_dir' => 'tool/protocol')
     )
 );
 

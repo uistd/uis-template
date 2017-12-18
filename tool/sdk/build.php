@@ -15,12 +15,12 @@ build_path = "sdk"
 shader = '*'
 ;继承的类
 property_name = 'underline'
-request_class_extends = "FFan\Std\Http\HttpClient"
+request_class_extends = "UiStd\Http\HttpClient"
 keep_action_name = true
 request_class_prefix = 'Api'
 response_class_suffix = 'Result'
 EOT;
-$manager = new \FFan\Dop\Manager(ROOT_PATH . 'tool/sdk/xml', $build_config);
+$manager = new \UiStd\Dop\Manager(ROOT_PATH . 'tool/sdk/xml', $build_config);
 $manager->registerPacker('uis_sdk', __DIR__ .'/packer/UisSdkPack.php');
 $build_re = $manager->build();
 echo $manager->getBuildLog(), PHP_EOL;

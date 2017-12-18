@@ -2,7 +2,7 @@
 
 namespace Uis\Tool;
 
-use FFan\Dop\Uis\Tool;
+use UiStd\Uis\Base\Tool;
 
 /**
  * Class ConfigCheckTool 检查配置

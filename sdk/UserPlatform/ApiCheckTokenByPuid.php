@@ -2,7 +2,7 @@
 
 namespace Sdk\UserPlatform;
 
-use FFan\Std\Http\HttpClient;
+use UiStd\Http\HttpClient;
 
 /**
  *  验证用户登录

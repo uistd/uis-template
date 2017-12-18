@@ -2,8 +2,8 @@
 
 namespace Protocol\Demo\Index;
 
-use FFan\Dop\Uis\IRequest;
-use FFan\Dop\DopValidator;
+use UiStd\Uis\Base\IRequest;
+use UiStd\Dop\DopValidator;
 
 /**
  *  根据puid获取用户信息的demo【严格模式】

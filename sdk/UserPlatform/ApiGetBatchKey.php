@@ -2,8 +2,8 @@
 
 namespace Sdk\UserPlatform;
 
-use FFan\Dop\Uis\ActionException;
-use FFan\Std\Http\HttpClient;
+use UiStd\Uis\Base\ActionException;
+use UiStd\Http\HttpClient;
 
 /**
  *  批量查询用户信息

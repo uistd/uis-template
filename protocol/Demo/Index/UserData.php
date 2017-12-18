@@ -2,7 +2,7 @@
 
 namespace Protocol\Demo\Index;
 
-use FFan\Dop\DopEncode;
+use UiStd\DopLib\DopEncode;
 
 /**
  *  

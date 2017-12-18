@@ -24,8 +24,8 @@ shader = "*"
 property_name = 'underline'
 ;不用生成dop.php
 no_autoload_file = true
-request_class_implements = "FFan\Dop\Uis\IRequest"
-response_class_extends = "FFan\Dop\Uis\Result"
+request_class_implements = "UiStd\Uis\Base\IRequest"
+response_class_extends = "UiStd\Uis\Base\Result"
 
 [build:objc]
 response_class_suffix = 'model'

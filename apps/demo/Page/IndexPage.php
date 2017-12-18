@@ -2,8 +2,8 @@
 
 namespace Uis\Demo\Page;
 
-use FFan\Dop\Uis\Page;
-use FFan\Std\Http\HttpClient;
+use UiStd\Uis\Base\Page;
+use UiStd\Http\HttpClient;
 use Protocol\Demo\Index\MainData;
 use Protocol\Demo\Index\MainRequest;
 use Protocol\Demo\Index\UserCompData;

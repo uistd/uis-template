@@ -1,6 +1,6 @@
 {
-  "name": "ffan/dop-uis-template",
-  "description": "FFan Dop UIService Basic Template. composer create-project ffan/dop-uis-template uis_template dev-master",
+  "name": "uistd/dop-uis-template",
+  "description": "FFan Dop UIService Basic Template. composer create-project uis/dop-uis-template uis_template dev-master",
   "keywords": [
     "ffan",
     "dop",
@@ -12,17 +12,15 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.6.0",
-    "ffan/dop-uis": "2.*",
-    "ffan/dop": "2.*",
-    "ffan/php-dop": "2.*",
-    "ffan/cluster-redis": "1.*",
-    "ffan/std-tpl": "1.*",
-    "ffan/std-mysql": "1.*",
-    "ffan/std-pubsub": "1.*"
+    "uistd/dop-uis": "3.*",
+    "uistd/dop": "3.*",
+    "uistd/php-dop": "3.*",
+    "uistd/tpl": "2.*",
+    "uistd/mysql": "2.*",
+    "uistd/pubsub": "2.*"
   },
   "autoload": {
     "psr-4": {
-      "FFan\\Uis\\Base\\": "base",
       "Protocol\\": "protocol",
       "Sdk\\": "sdk",
       "Dao\\" : "dao"
@@ -30,18 +28,5 @@
   },
   "config": {
     "secure-http": false
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "http://composer.intra.ffan.com/repo/private/"
-    },
-    {
-      "type": "composer",
-      "url": "http://composer.intra.ffan.com/repo/packagist/"
-    },
-    {
-      "packagist": false
-    }
-  ]
+  }
 }

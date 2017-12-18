@@ -1,10 +1,10 @@
 <?php
 
-use FFan\Dop\Build\CodeBuf;
-use FFan\Std\Common\Config;
-use FFan\Std\Common\ConfigBase;
-use FFan\Std\Common\Str;
-use FFan\Std\Common\Utils;
+use UiStd\Dop\Build\CodeBuf;
+use UiStd\Common\Config;
+use UiStd\Common\ConfigBase;
+use UiStd\Common\Str;
+use UiStd\Common\Utils;
 
 define('ROOT_PATH', dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);
 chdir(__DIR__);
@@ -132,7 +132,7 @@ class DaoHelper extends ConfigBase
         $model_class = $u_table_name . 'Model';
         $full_model_class = 'Dao\\' . $u_db_name . '\Model\\' . $model_class;
         $code_buf->pushStr('use ' . $full_model_class . ';');
-        $code_buf->pushStr('use FFan\Std\Mysql\TplBase;')->emptyLine();
+        $code_buf->pushStr('use UiStd\Mysql\TplBase;')->emptyLine();
         $class_name = $u_table_name . 'Tpl';
         $code_buf->pushStr('/**');
         $code_buf->pushStr(' * Class ' . $class_name);

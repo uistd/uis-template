@@ -2,9 +2,9 @@
 
 namespace Protocol\Demo\Index;
 
-use FFan\Dop\DopEncode;
-use FFan\Dop\DopDecode;
-use FFan\Dop\Uis\Result;
+use UiStd\DopLib\DopEncode;
+use UiStd\DopLib\DopDecode;
+use UiStd\Uis\Base\Result;
 
 /**
  *  简单的测试

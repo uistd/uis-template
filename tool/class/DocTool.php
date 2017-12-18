@@ -2,20 +2,18 @@
 
 namespace Uis\Tool;
 
-use FFan\Dop\Manager;
-use FFan\Dop\Plugin\Valid\ValidRule;
-use FFan\Dop\Protocol\Item;
-use FFan\Dop\Protocol\ItemType;
-use FFan\Dop\Protocol\ListItem;
-use FFan\Dop\Protocol\MapItem;
-use FFan\Dop\Protocol\Struct;
-use FFan\Dop\Protocol\StructItem;
-use FFan\Dop\Uis\Application;
-use FFan\Dop\Uis\IRequest;
-use FFan\Dop\Uis\Tool;
-use FFan\Std\Common\Config;
-use FFan\Std\Common\Str;
-use FFan\Std\Tpl\Tpl;
+use UiStd\Dop\Manager;
+use UiStd\Dop\Plugin\Valid\ValidRule;
+use UiStd\Dop\Protocol\Item;
+use UiStd\Dop\Protocol\ItemType;
+use UiStd\Dop\Protocol\ListItem;
+use UiStd\Dop\Protocol\MapItem;
+use UiStd\Dop\Protocol\Struct;
+use UiStd\Dop\Protocol\StructItem;
+use UiStd\Uis\Base\Application;
+use UiStd\Uis\Base\Tool;
+use UiStd\Common\Str;
+use UiStd\Tpl\Tpl;
 
 /**
  * Class DocTool
@@ -384,7 +382,7 @@ class DocTool extends Tool
         if ($rule->format_set) {
             if ('/' === $rule->format_set[0]) {
                 $desc[] = '正则：' . $rule->format_set;
-            } elseif (is_callable(['\FFan\Dop\DopValidator', 'is' . Str::camelName($rule->format_set)])) {
+            } elseif (is_callable(['\UiStd\Dop\DopValidator', 'is' . Str::camelName($rule->format_set)])) {
                 $desc[] = '内置类型：' . $rule->format_set;
             }
         }

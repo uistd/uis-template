@@ -1,17 +1,17 @@
 <?php
 
-namespace FFan\Dop\Coder\Php;
+namespace UiStd\Dop\Coder\Php;
 
-use FFan\Dop\Build\CodeBuf;
-use FFan\Dop\Build\FileBuf;
-use FFan\Dop\Build\PackerBase;
-use FFan\Dop\Build\StrBuf;
-use FFan\Dop\Protocol\Item;
-use FFan\Dop\Protocol\Struct;
+use UiStd\Dop\Build\CodeBuf;
+use UiStd\Dop\Build\FileBuf;
+use UiStd\Dop\Build\PackerBase;
+use UiStd\Dop\Build\StrBuf;
+use UiStd\Dop\Protocol\Item;
+use UiStd\Dop\Protocol\Struct;
 
 /**
  * Class ArrayPack
- * @package FFan\Dop\Coder\Php
+ * @package UiStd\Dop\Coder\Php
  */
 class UisSdkPack extends PackerBase
 {
@@ -92,7 +92,7 @@ class UisSdkPack extends PackerBase
         $return_buf = new StrBuf();
         $import_buf = $this->file_buf->getBuf(FileBuf::IMPORT_BUF);
         if ($import_buf) {
-            $import_buf->pushStr('use FFan\Dop\Uis\ActionException;');
+            $import_buf->pushStr('use UiStd\Uis\Base\ActionException;');
         }
         $return_buf->pushStr(' * @return ');
         $method_buf->pushStr('/**');

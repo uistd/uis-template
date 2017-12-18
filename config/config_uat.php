@@ -12,12 +12,12 @@ return array(
         'host' => '127.0.0.1',
     ),
     //接口配置
-    'ffan-http' => array(
+    'uis-http' => array(
         'debug_mode' => true,
         'gateway_host' => 'http://api.uat.ffan.com'
     ),
     //公共redis集群
-    'cluster-redis:public' => array(
+    'uis-cache:public' => array(
         'type' => 'clusterRedis',
         'server' => array(
             '10.213.33.170:10401',

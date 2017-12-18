@@ -1,18 +1,18 @@
 <?php
 
-namespace FFan\Dop\Coder\Objc;
+namespace UiStd\Dop\Coder\Objc;
 
-use FFan\Dop\Build\FileBuf;
-use FFan\Dop\Build\PackerBase;
-use FFan\Dop\Build\StrBuf;
-use FFan\Dop\Protocol\ItemType;
-use FFan\Dop\Protocol\ListItem;
-use FFan\Dop\Protocol\Struct;
-use FFan\Dop\Protocol\StructItem;
+use UiStd\Dop\Build\FileBuf;
+use UiStd\Dop\Build\PackerBase;
+use UiStd\Dop\Build\StrBuf;
+use UiStd\Dop\Protocol\ItemType;
+use UiStd\Dop\Protocol\ListItem;
+use UiStd\Dop\Protocol\Struct;
+use UiStd\Dop\Protocol\StructItem;
 
 /**
  * Class FixDataPack 生成接口uri地址
- * @package FFan\Dop\Coder\Objc
+ * @package UiStd\Dop\Coder\Objc
  */
 class ObjcUriPack extends PackerBase
 {
@@ -22,8 +22,8 @@ class ObjcUriPack extends PackerBase
     protected $coder;
 
     /**
-     * @param \FFan\Dop\Protocol\Struct $struct
-     * @param \FFan\Dop\Build\CodeBuf $code_buf
+     * @param \UiStd\Dop\Protocol\Struct $struct
+     * @param \UiStd\Dop\Build\CodeBuf $code_buf
      */
     public function buildPackMethod($struct, $code_buf)
     {

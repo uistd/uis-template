@@ -2,7 +2,7 @@
 
 namespace Protocol\Demo\Index;
 
-use FFan\Dop\Uis\IRequest;
+use UiStd\Uis\Base\IRequest;
 
 /**
  *  根据puid获取用户信息的demo【兼容模式】
@@ -15,10 +15,6 @@ class UserCompRequest implements IRequest
      * @var string
      */
     public $puid;
-    /**
-     * @var int
-     */
-    public $a;
     
     /**
      * @var string 数据有效性检查出错消息
@@ -36,9 +32,6 @@ class UserCompRequest implements IRequest
         if (null !== $this->puid) {
             $result['puid'] = (string)$this->puid;
         }
-        if (null !== $this->a) {
-            $result['a'] = (int)$this->a;
-        }
         if ($empty_convert && empty($result)) {
             return new \stdClass();
         }
@@ -54,9 +47,6 @@ class UserCompRequest implements IRequest
         if (isset($data['puid'])) {
             $this->puid = (string)$data['puid'];
         }
-        if (isset($data['a'])) {
-            $this->a = (int)$data['a'];
-        }
     }
     
     /**
@@ -68,12 +58,6 @@ class UserCompRequest implements IRequest
         if (!is_string($this->puid) || 0 === strlen($this->puid)) {
             $this->validate_error_msg = "Invalid `puid`";
             return false;
-        }
-        if (null !== $this->a) {
-            if ($this->a < -0x80000000 || $this->a > 0x7fffffff) {
-                $this->validate_error_msg = "Invalid integer range of `a`.";
-                return false;
-            }
         }
         return true;
     }

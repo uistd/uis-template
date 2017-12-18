@@ -1,14 +1,14 @@
 <?php
 
-use FFan\Dop\Manager;
-use FFan\Std\Common\Config;
-use FFan\Std\Common\Str;
-use FFan\Std\Common\Utils;
+use UiStd\Dop\Manager;
+use UiStd\Common\Config;
+use UiStd\Common\Str;
+use UiStd\Common\Utils;
 
 define('ROOT_PATH', dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);
 chdir(__DIR__);
 require_once ROOT_PATH . 'vendor/autoload.php';
-require_once ROOT_PATH . 'vendor/ffan/dop/tool/MysqlToXml.php';
+require_once ROOT_PATH . 'vendor/uistd/dop/tool/MysqlToXml.php';
 $config = require(ROOT_PATH . 'config/config.php');
 Config::init($config);
 

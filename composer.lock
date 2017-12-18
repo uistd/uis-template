@@ -4,223 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "df542087153df56e0199bc14a08f4be7",
+    "content-hash": "e6e32fd5e298c744b96a1b3402ddf0ef",
     "packages": [
         {
-            "name": "ffan/cluster-redis",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "http://gitlab.ffan.biz/php/cluster-redis.git",
-                "reference": "53a6833a93f8093339989d351f0d3ccf5e6c3721"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/cluster-redis/1.0.6.0/53a6833a93f8093339989d351f0d3ccf5e6c3721.zip",
-                "reference": "53a6833a93f8093339989d351f0d3ccf5e6c3721",
-                "shasum": null,
-                "mirrors": [
-                    {
-                        "url": "http://composer.intra.ffan.com/repo/private/dists/%package%/%version%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "archive": {
-                "exclude": [
-                    "test",
-                    ".gitignore"
-                ]
-            },
-            "require": {
-                "ffan/std-async": "1.*",
-                "ffan/std-common": "2.*",
-                "ffan/std-console": "1.*",
-                "ffan/std-logger": "1.*",
-                "php": ">=5.5.0"
-            },
-            "type": "composer",
-            "autoload": {
-                "psr-4": {
-                    "FFan\\Std\\ClusterRedis\\": "src"
-                }
-            },
-            "authors": [
-                {
-                    "name": "huangshunzhao",
-                    "email": "huangshunzhao@wanda.cn",
-                    "role": "Founder"
-                }
-            ],
-            "description": "FFan STD ClusterRedis",
-            "keywords": [
-                "cluster redis",
-                "ffan"
-            ],
-            "time": "2017-09-06T12:31:20+00:00"
-        },
-        {
-            "name": "ffan/dop",
-            "version": "2.5.2",
-            "source": {
-                "type": "git",
-                "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "e24d9b22c80eedc76303edf8f2ec80daa8434832"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop/2.5.2.0/e24d9b22c80eedc76303edf8f2ec80daa8434832.zip",
-                "reference": "e24d9b22c80eedc76303edf8f2ec80daa8434832",
-                "shasum": null,
-                "mirrors": [
-                    {
-                        "url": "http://composer.intra.ffan.com/repo/private/dists/%package%/%version%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "archive": {
-                "exclude": [
-                    "test",
-                    ".gitignore"
-                ]
-            },
-            "require": {
-                "ffan/std-common": "2.*",
-                "ffan/std-console": "1.*",
-                "ffan/std-git": "1.*",
-                "php": ">=5.5.0"
-            },
-            "type": "composer",
-            "autoload": {
-                "psr-4": {
-                    "FFan\\Dop\\": "base",
-                    "FFan\\Dop\\Coder\\": "coder",
-                    "FFan\\Dop\\Plugin\\": "plugin",
-                    "FFan\\Dop\\Tool\\": "tool"
-                }
-            },
-            "authors": [
-                {
-                    "name": "huangshunzhao",
-                    "email": "huangshunzhao@wanda.cn",
-                    "role": "Founder"
-                }
-            ],
-            "description": "FFan DOP",
-            "keywords": [
-                "dop",
-                "ffan"
-            ],
-            "time": "2017-12-17T15:30:45+00:00"
-        },
-        {
-            "name": "ffan/dop-uis",
-            "version": "2.1.6",
-            "source": {
-                "type": "git",
-                "url": "http://gitlab.ffan.biz/dop/uis.git",
-                "reference": "cddeb684f3f13d84165fbd6ddf6fd27a95adcffd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/dop-uis/2.1.6.0/cddeb684f3f13d84165fbd6ddf6fd27a95adcffd.zip",
-                "reference": "cddeb684f3f13d84165fbd6ddf6fd27a95adcffd",
-                "shasum": null,
-                "mirrors": [
-                    {
-                        "url": "http://composer.intra.ffan.com/repo/private/dists/%package%/%version%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "ffan/php-dop": "2.*",
-                "ffan/std-async": "1.*",
-                "ffan/std-cache": "2.*",
-                "ffan/std-common": "2.*",
-                "ffan/std-console": "1.*",
-                "ffan/std-event": "2.*",
-                "ffan/std-http": "1.*",
-                "ffan/std-logger": "1.*",
-                "ffan/std-tpl": "1.*",
-                "php": ">=5.6.0"
-            },
-            "type": "composer",
-            "autoload": {
-                "psr-4": {
-                    "FFan\\Dop\\Uis\\": "src",
-                    "FFan\\Uis\\Work\\": "work"
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Dop ui service framework",
-            "keywords": [
-                "dop",
-                "ffan",
-                "uis"
-            ],
-            "time": "2017-12-17T14:20:32+00:00"
-        },
-        {
-            "name": "ffan/php-dop",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "http://gitlab.ffan.biz/dop/php.git",
-                "reference": "9aa852dc05769967569ad0c002f9d294325d1747"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/php-dop/2.0.1.0/9aa852dc05769967569ad0c002f9d294325d1747.zip",
-                "reference": "9aa852dc05769967569ad0c002f9d294325d1747",
-                "shasum": null,
-                "mirrors": [
-                    {
-                        "url": "http://composer.intra.ffan.com/repo/private/dists/%package%/%version%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "ffan/std-common": "2.*",
-                "php": ">=5.5.0"
-            },
-            "type": "composer",
-            "autoload": {
-                "psr-4": {
-                    "FFan\\Dop\\": "src"
-                }
-            },
-            "authors": [
-                {
-                    "name": "huangshunzhao",
-                    "email": "huangshunzhao@wanda.cn",
-                    "role": "Founder and project lead"
-                }
-            ],
-            "description": "FFan dop php common files",
-            "keywords": [
-                "dop",
-                "ffan",
-                "php"
-            ],
-            "time": "2017-09-21T05:54:23+00:00"
-        },
-        {
-            "name": "ffan/std-async",
-            "version": "1.0.3",
+            "name": "uistd/async",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/async.git",
-                "reference": "0c6ea861285def27d3c8f1e3c0ac4d1476ff6826"
+                "reference": "9eb302e610cf3ab999be795299c0c4b34edc9f8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-async/1.0.3.0/0c6ea861285def27d3c8f1e3c0ac4d1476ff6826.zip",
-                "reference": "0c6ea861285def27d3c8f1e3c0ac4d1476ff6826",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/async/2.0.0.0/9eb302e610cf3ab999be795299c0c4b34edc9f8a.zip",
+                "reference": "9eb302e610cf3ab999be795299c0c4b34edc9f8a",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -236,14 +33,14 @@
                 ]
             },
             "require": {
-                "ffan/std-event": "2.*",
-                "ffan/std-logger": "1.*",
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "uistd/event": "3.*",
+                "uistd/logger": "2.*"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Async\\": "src"
+                    "UiStd\\Async\\": "src"
                 }
             },
             "authors": [
@@ -253,26 +50,26 @@
                     "role": "Founder and project lead"
                 }
             ],
-            "description": "FFan php async components",
+            "description": "UI Service 框架异步操作组件",
             "keywords": [
                 "async",
-                "ffan",
-                "php"
+                "ui service",
+                "uistd"
             ],
-            "time": "2017-12-13T11:35:40+00:00"
+            "time": "2017-12-18T03:27:32+00:00"
         },
         {
-            "name": "ffan/std-cache",
-            "version": "2.1.1",
+            "name": "uistd/cache",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-cache.git",
-                "reference": "b798f95807db621eb893f3d10cbc848ace4a0112"
+                "reference": "cd06fb2e9eb36d0831419934d8983cf7d2a208eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-cache/2.1.1.0/b798f95807db621eb893f3d10cbc848ace4a0112.zip",
-                "reference": "b798f95807db621eb893f3d10cbc848ace4a0112",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/cache/3.0.0.0/cd06fb2e9eb36d0831419934d8983cf7d2a208eb.zip",
+                "reference": "cd06fb2e9eb36d0831419934d8983cf7d2a208eb",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -288,16 +85,16 @@
                 ]
             },
             "require": {
-                "ffan/std-common": "2.*",
-                "ffan/std-console": "1.*",
-                "ffan/std-event": "2.*",
-                "ffan/std-logger": "1.*",
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "uistd/common": "3.*",
+                "uistd/console": "2.*",
+                "uistd/event": "3.*",
+                "uistd/logger": "2.*"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Cache\\": "src"
+                    "UiStd\\Cache\\": "src"
                 }
             },
             "authors": [
@@ -307,26 +104,26 @@
                     "role": "Founder"
                 }
             ],
-            "description": "FFan cache",
+            "description": "UI Service 框架缓存组件，定义了缓存操作接口，实现多种缓存方式。",
             "keywords": [
                 "cache",
-                "ffan",
-                "std"
+                "ui service",
+                "uistd"
             ],
-            "time": "2017-12-13T11:38:09+00:00"
+            "time": "2017-12-18T03:41:18+00:00"
         },
         {
-            "name": "ffan/std-common",
-            "version": "2.1.6",
+            "name": "uistd/common",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-utils.git",
-                "reference": "e9885aa0e9c95f09ddfda123535fa6763966e79d"
+                "reference": "128bc7c725b7dfead61a1a56c4a5aac520feaff5"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-common/2.1.6.0/e9885aa0e9c95f09ddfda123535fa6763966e79d.zip",
-                "reference": "e9885aa0e9c95f09ddfda123535fa6763966e79d",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/common/3.0.0.0/128bc7c725b7dfead61a1a56c4a5aac520feaff5.zip",
+                "reference": "128bc7c725b7dfead61a1a56c4a5aac520feaff5",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -348,7 +145,7 @@
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Common\\": "src"
+                    "UiStd\\Common\\": "src"
                 }
             },
             "authors": [
@@ -358,26 +155,26 @@
                     "role": "Founder and project lead"
                 }
             ],
-            "description": "FFan php utils components",
+            "description": "UI Service 模板基础组件",
             "keywords": [
-                "ffan",
-                "php",
+                "ui service",
+                "uistd",
                 "utils"
             ],
-            "time": "2017-12-15T06:47:48+00:00"
+            "time": "2017-12-18T03:13:57+00:00"
         },
         {
-            "name": "ffan/std-console",
-            "version": "1.2.1",
+            "name": "uistd/console",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/console.git",
-                "reference": "5276724c22b0cdb046c94d656b6e6356283ac9f5"
+                "reference": "0471108cadd5eb98889f62646d8eb0b481e81bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-console/1.2.1.0/5276724c22b0cdb046c94d656b6e6356283ac9f5.zip",
-                "reference": "5276724c22b0cdb046c94d656b6e6356283ac9f5",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/console/2.0.0.0/0471108cadd5eb98889f62646d8eb0b481e81bf8.zip",
+                "reference": "0471108cadd5eb98889f62646d8eb0b481e81bf8",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -393,15 +190,15 @@
                 ]
             },
             "require": {
-                "ffan/std-common": "2.*",
-                "ffan/std-event": "2.*",
-                "ffan/std-logger": "1.*",
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "uistd/common": "3.*",
+                "uistd/event": "3.*",
+                "uistd/logger": "2.*"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Console\\": "src"
+                    "UiStd\\Console\\": "src"
                 },
                 "files": [
                     "src/helper.php"
@@ -414,25 +211,25 @@
                     "role": "Founder"
                 }
             ],
-            "description": "FFan STD Console",
+            "description": "UI Service 调试控制台组件",
             "keywords": [
                 "console",
                 "ffan"
             ],
-            "time": "2017-12-13T11:37:03+00:00"
+            "time": "2017-12-18T03:33:42+00:00"
         },
         {
-            "name": "ffan/std-event",
-            "version": "2.1.0",
+            "name": "uistd/dop",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
-                "url": "http://gitlab.ffan.biz/php/ffan-event.git",
-                "reference": "e406c15989a4c79de7bc06df4e9522ecc57d1d7d"
+                "url": "http://gitlab.ffan.biz/dop/dop.git",
+                "reference": "41453b5abd4e65f61f0bc3417240e79dfee0c96d"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-event/2.1.0.0/e406c15989a4c79de7bc06df4e9522ecc57d1d7d.zip",
-                "reference": "e406c15989a4c79de7bc06df4e9522ecc57d1d7d",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.2.0/41453b5abd4e65f61f0bc3417240e79dfee0c96d.zip",
+                "reference": "41453b5abd4e65f61f0bc3417240e79dfee0c96d",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -448,12 +245,18 @@
                 ]
             },
             "require": {
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "uistd/common": "3.*",
+                "uistd/console": "2.*",
+                "uistd/git": "2.*"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Event\\": "src"
+                    "UiStd\\Dop\\": "base",
+                    "UiStd\\Dop\\Coder\\": "coder",
+                    "UiStd\\Dop\\Plugin\\": "plugin",
+                    "UiStd\\Dop\\Tool\\": "tool"
                 }
             },
             "authors": [
@@ -463,26 +266,76 @@
                     "role": "Founder"
                 }
             ],
-            "description": "FFan std event",
+            "description": "数据转对象的代码自动生成工具，主要用于模型对象的自动生成的数据 打包、解包方法生成。",
             "keywords": [
-                "event",
-                "ffan",
-                "std"
+                "dop",
+                "ui service",
+                "uistd"
             ],
-            "time": "2017-12-13T11:39:12+00:00"
+            "time": "2017-12-18T08:41:36+00:00"
         },
         {
-            "name": "ffan/std-git",
-            "version": "1.1.1",
+            "name": "uistd/dop-uis",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
-                "url": "http://gitlab.ffan.biz/php/git.git",
-                "reference": "3e163785955139edfabedc118a0af38400a23ac3"
+                "url": "http://gitlab.ffan.biz/dop/uis.git",
+                "reference": "11ee114c908ada2d564e2fac407636b17ad1ab90"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-git/1.1.1.0/3e163785955139edfabedc118a0af38400a23ac3.zip",
-                "reference": "3e163785955139edfabedc118a0af38400a23ac3",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop-uis/3.0.1.0/11ee114c908ada2d564e2fac407636b17ad1ab90.zip",
+                "reference": "11ee114c908ada2d564e2fac407636b17ad1ab90",
+                "shasum": null,
+                "mirrors": [
+                    {
+                        "url": "http://composer.intra.ffan.com/repo/private/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "uistd/async": "2.*",
+                "uistd/cache": "3.*",
+                "uistd/common": "3.*",
+                "uistd/console": "2.*",
+                "uistd/event": "3.*",
+                "uistd/http": "2.*",
+                "uistd/logger": "2.*",
+                "uistd/php-dop": "3.*",
+                "uistd/tpl": "2.*"
+            },
+            "type": "composer",
+            "autoload": {
+                "psr-4": {
+                    "UiStd\\Uis\\Base\\": "src",
+                    "UiStd\\Uis\\Work\\": "work"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Dop ui service framework",
+            "keywords": [
+                "dop",
+                "ui service",
+                "uis"
+            ],
+            "time": "2017-12-18T08:32:17+00:00"
+        },
+        {
+            "name": "uistd/event",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "http://gitlab.ffan.biz/php/ffan-event.git",
+                "reference": "ffeabb1a07b2ba05b3d425e899abeb2495025d05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/event/3.0.0.0/ffeabb1a07b2ba05b3d425e899abeb2495025d05.zip",
+                "reference": "ffeabb1a07b2ba05b3d425e899abeb2495025d05",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -498,14 +351,65 @@
                 ]
             },
             "require": {
-                "ffan/std-common": "2.*",
-                "ffan/std-logger": "1.*",
                 "php": ">=5.5.0"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Git\\": "src"
+                    "UiStd\\Event\\": "src"
+                }
+            },
+            "authors": [
+                {
+                    "name": "huangshunzhao",
+                    "email": "huangshunzhao@wanda.cn",
+                    "role": "Founder"
+                }
+            ],
+            "description": "UI Service 框架事件管理组件",
+            "keywords": [
+                "event",
+                "ui service",
+                "uis",
+                "uistd"
+            ],
+            "time": "2017-12-18T03:01:39+00:00"
+        },
+        {
+            "name": "uistd/git",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "http://gitlab.ffan.biz/php/git.git",
+                "reference": "db74e35eda593e40df321bb531c7bf16285f7ca3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/git/2.0.0.0/db74e35eda593e40df321bb531c7bf16285f7ca3.zip",
+                "reference": "db74e35eda593e40df321bb531c7bf16285f7ca3",
+                "shasum": null,
+                "mirrors": [
+                    {
+                        "url": "http://composer.intra.ffan.com/repo/private/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "archive": {
+                "exclude": [
+                    "test",
+                    ".gitignore"
+                ]
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "uistd/common": "3.*",
+                "uistd/logger": "2.*"
+            },
+            "type": "composer",
+            "autoload": {
+                "psr-4": {
+                    "UiStd\\Git\\": "src"
                 }
             },
             "authors": [
@@ -515,26 +419,26 @@
                     "role": "Founder and project lead"
                 }
             ],
-            "description": "FFan php git components",
+            "description": "UI Service 简单的PHP Git工具，主要用于代码自动化生成之后，自动将代码push入库",
             "keywords": [
-                "ffan",
                 "git",
-                "php"
+                "ui service",
+                "uistd"
             ],
-            "time": "2017-12-13T11:40:19+00:00"
+            "time": "2017-12-18T03:50:05+00:00"
         },
         {
-            "name": "ffan/std-http",
-            "version": "1.1.1",
+            "name": "uistd/http",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-http.git",
-                "reference": "5f384953f5151b7226413a0b935f011adb2589a7"
+                "reference": "4ba4deddbc067a8c33330161b9286d004245f203"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-http/1.1.1.0/5f384953f5151b7226413a0b935f011adb2589a7.zip",
-                "reference": "5f384953f5151b7226413a0b935f011adb2589a7",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/http/2.0.0.0/4ba4deddbc067a8c33330161b9286d004245f203.zip",
+                "reference": "4ba4deddbc067a8c33330161b9286d004245f203",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -550,16 +454,16 @@
                 ]
             },
             "require": {
-                "ffan/std-async": "1.*",
-                "ffan/std-common": "2.*",
-                "ffan/std-console": "1.*",
-                "ffan/std-logger": "1.*",
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "uistd/async": "2.*",
+                "uistd/common": "3.*",
+                "uistd/console": "2.*",
+                "uistd/logger": "2.*"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Http\\": "src/"
+                    "UiStd\\Http\\": "src/"
                 }
             },
             "authors": [
@@ -569,26 +473,26 @@
                     "role": "Founder"
                 }
             ],
-            "description": "FFan http components",
+            "description": "UI Service Http协议接口请求组件，结合DOP代码自动化生成工具可以生成接口模板。",
             "keywords": [
-                "ffan",
                 "http",
-                "php"
+                "ui service",
+                "uis"
             ],
-            "time": "2017-12-15T15:37:28+00:00"
+            "time": "2017-12-18T03:56:24+00:00"
         },
         {
-            "name": "ffan/std-logger",
-            "version": "1.2.4",
+            "name": "uistd/logger",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/logger.git",
-                "reference": "c0f2bd28e825d0e3aac7b1722280a1936dcda559"
+                "reference": "b7505b4ad9f2604f0858859ffb1f3b85895328c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-logger/1.2.4.0/c0f2bd28e825d0e3aac7b1722280a1936dcda559.zip",
-                "reference": "c0f2bd28e825d0e3aac7b1722280a1936dcda559",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/logger/2.0.0.0/b7505b4ad9f2604f0858859ffb1f3b85895328c2.zip",
+                "reference": "b7505b4ad9f2604f0858859ffb1f3b85895328c2",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -604,14 +508,14 @@
                 ]
             },
             "require": {
-                "ffan/std-common": "2.*",
-                "ffan/std-event": "2.*",
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "uistd/common": "3.*",
+                "uistd/event": "3.*"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Logger\\": "src"
+                    "UiStd\\Logger\\": "src"
                 }
             },
             "authors": [
@@ -621,25 +525,26 @@
                     "role": "Founder"
                 }
             ],
-            "description": "FFan STD Logger",
+            "description": "UI Service 框架日志组件",
             "keywords": [
-                "ffan",
-                "logger"
+                "logger",
+                "ui service",
+                "uistd"
             ],
-            "time": "2017-12-14T08:06:54+00:00"
+            "time": "2017-12-18T03:23:13+00:00"
         },
         {
-            "name": "ffan/std-mysql",
-            "version": "1.1.0",
+            "name": "uistd/mysql",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-mysql.git",
-                "reference": "71ac57ffced06995c82ca0cd91d10752235cf779"
+                "reference": "a7da20c8c855c8c13e59f30bd0ba34fe0b238a35"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-mysql/1.1.0.0/71ac57ffced06995c82ca0cd91d10752235cf779.zip",
-                "reference": "71ac57ffced06995c82ca0cd91d10752235cf779",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/mysql/2.0.0.0/a7da20c8c855c8c13e59f30bd0ba34fe0b238a35.zip",
+                "reference": "a7da20c8c855c8c13e59f30bd0ba34fe0b238a35",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -656,16 +561,16 @@
             },
             "require": {
                 "ext-mysqli": "*",
-                "ffan/std-common": "2.*",
-                "ffan/std-console": "1.*",
-                "ffan/std-event": "2.*",
-                "ffan/std-logger": "1.*",
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "uistd/common": "3.*",
+                "uistd/console": "2.*",
+                "uistd/event": "3.*",
+                "uistd/logger": "2.*"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Mysql\\": "src"
+                    "UiStd\\Mysql\\": "src"
                 }
             },
             "authors": [
@@ -675,26 +580,71 @@
                     "role": "Founder"
                 }
             ],
-            "description": "FFan mysql",
+            "description": "UI Service 简易Mysql数据库操作组件。",
             "keywords": [
-                "ffan",
                 "mysql",
-                "php"
+                "ui service",
+                "uistd"
             ],
-            "time": "2017-12-13T11:07:16+00:00"
+            "time": "2017-12-18T04:03:00+00:00"
         },
         {
-            "name": "ffan/std-pubsub",
-            "version": "1.1.0",
+            "name": "uistd/php-dop",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
-                "url": "http://gitlab.ffan.biz/php/pubsub.git",
-                "reference": "0f4b976972c01b243c3894b034585c8bd78533dd"
+                "url": "http://gitlab.ffan.biz/dop/php.git",
+                "reference": "4f7dae4f4c2eea20b6c3d69c3c2fded24ef23ccd"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-pubsub/1.1.0.0/0f4b976972c01b243c3894b034585c8bd78533dd.zip",
-                "reference": "0f4b976972c01b243c3894b034585c8bd78533dd",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/php-dop/3.0.2.0/4f7dae4f4c2eea20b6c3d69c3c2fded24ef23ccd.zip",
+                "reference": "4f7dae4f4c2eea20b6c3d69c3c2fded24ef23ccd",
+                "shasum": null,
+                "mirrors": [
+                    {
+                        "url": "http://composer.intra.ffan.com/repo/private/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "uistd/common": "3.*"
+            },
+            "type": "composer",
+            "autoload": {
+                "psr-4": {
+                    "UiStd\\DopLib\\": "src"
+                }
+            },
+            "authors": [
+                {
+                    "name": "huangshunzhao",
+                    "email": "huangshunzhao@wanda.cn",
+                    "role": "Founder and project lead"
+                }
+            ],
+            "description": "uistd dop php common files",
+            "keywords": [
+                "dop",
+                "php",
+                "ui service"
+            ],
+            "time": "2017-12-18T08:28:27+00:00"
+        },
+        {
+            "name": "uistd/pubsub",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "http://gitlab.ffan.biz/php/pubsub.git",
+                "reference": "7fe13de9be019a8eacc73d895f0a3de459288d81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/pubsub/2.0.0.0/7fe13de9be019a8eacc73d895f0a3de459288d81.zip",
+                "reference": "7fe13de9be019a8eacc73d895f0a3de459288d81",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -710,15 +660,15 @@
                 ]
             },
             "require": {
-                "ffan/std-common": "2.*",
-                "ffan/std-console": "1.*",
-                "ffan/std-logger": "1.*",
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "uistd/common": "3.*",
+                "uistd/console": "2.*",
+                "uistd/logger": "2.*"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\PubSub\\": "src"
+                    "UiStd\\PubSub\\": "src"
                 }
             },
             "authors": [
@@ -734,20 +684,20 @@
                 "php",
                 "pubsub"
             ],
-            "time": "2017-12-13T11:47:43+00:00"
+            "time": "2017-12-18T04:15:29+00:00"
         },
         {
-            "name": "ffan/std-tpl",
-            "version": "1.1.4",
+            "name": "uistd/tpl",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-tpl.git",
-                "reference": "fe9fe1724289b2ec84e9b799e6d25ea5777cf3bf"
+                "reference": "38f7269de8cbc228175ed6c11c7687b565ec784e"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/ffan/std-tpl/1.1.4.0/fe9fe1724289b2ec84e9b799e6d25ea5777cf3bf.zip",
-                "reference": "fe9fe1724289b2ec84e9b799e6d25ea5777cf3bf",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/tpl/2.0.0.0/38f7269de8cbc228175ed6c11c7687b565ec784e.zip",
+                "reference": "38f7269de8cbc228175ed6c11c7687b565ec784e",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -763,13 +713,13 @@
                 ]
             },
             "require": {
-                "ffan/std-common": "2.*",
-                "php": ">=5.5.0"
+                "php": ">=5.5.0",
+                "uistd/common": "3.*"
             },
             "type": "composer",
             "autoload": {
                 "psr-4": {
-                    "FFan\\Std\\Tpl\\": "src"
+                    "UiStd\\Tpl\\": "src"
                 }
             },
             "authors": [
@@ -779,13 +729,13 @@
                     "role": "Founder and project lead"
                 }
             ],
-            "description": "FFan tpl",
+            "description": "UI Service 轻量化模板组件，兼容大部分Smarty语法，但不会生成临时文件，生成的代码会缓存在内存中（如果加载了apcu扩展）",
             "keywords": [
-                "ffan",
-                "php",
-                "tpl"
+                "tpl",
+                "ui service",
+                "uistd"
             ],
-            "time": "2017-12-13T11:10:23+00:00"
+            "time": "2017-12-18T04:10:46+00:00"
         }
     ],
     "packages-dev": [],

@@ -2,7 +2,7 @@
 
 namespace Protocol\Demo\Index;
 
-use FFan\Dop\Uis\IRequest;
+use UiStd\Uis\Base\IRequest;
 
 /**
  *  简单的测试

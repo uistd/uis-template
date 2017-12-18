@@ -2,8 +2,8 @@
 
 namespace Uis\Demo;
 
-use FFan\Dop\Uis\Filter;
-use FFan\Std\Common\Ip;
+use UiStd\Uis\Base\Filter;
+use UiStd\Common\Ip;
 
 /**
  * Class DemoFilter 过滤器
