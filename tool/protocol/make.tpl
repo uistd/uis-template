@@ -48,6 +48,6 @@ exclude_file = 'feed/life_star.xml'
 ignore_response_main_model = 1
 request_class_implements = "PGRequestProtocol"
 [git:objc]
-url = 'ssh://git@gitlab.ffan.biz:8022/model/feed.git'
+url = 'ssh://git@gitlab.ffan.biz:8022/model/demo.git'
 username = doptool
 email = '18844626@qq.com'
