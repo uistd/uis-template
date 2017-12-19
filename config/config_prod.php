@@ -8,8 +8,9 @@ return array(
     //环境【重要】
     'env' => 'prod',
     //日志配置
-    'logger' => array(
+    'uis-logger' => array(
         'host' => '10.213.72.138',
+        'log_post_size' => 4096
     ),
     //接口配置
     'uis-http' => array(

@@ -1,10 +1,10 @@
 <?php
 
-use UiStd\Dop\Build\CodeBuf;
 use UiStd\Common\Config;
 use UiStd\Common\ConfigBase;
 use UiStd\Common\Str;
 use UiStd\Common\Utils;
+use UiStd\Dop\Build\CodeBuf;
 
 define('ROOT_PATH', dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);
 chdir(__DIR__);
@@ -55,7 +55,7 @@ class DaoHelper extends ConfigBase
         $this->file_name = $file_name;
         $this->initConfig($mysql_conf);
         $this->config_name = $this->getConfigString('config_name', 'main');
-        $config_key = 'ffan-mysql:' . $this->config_name;
+        $config_key = 'uis-mysql:' . $this->config_name;
         $db_config = Config::get($config_key);
         //如果存在数据库配置
         if (is_array($db_config)) {
@@ -200,10 +200,23 @@ class DaoHelper extends ConfigBase
         $code_buf->backIndent()->pushStr('}');
 
         $code_buf->emptyLine()->pushStr('/**');
+        $code_buf->pushStr(' * 主键 查找多条记录');
+        $code_buf->pushStr(' * @param ' . $pk_type . '[] $' . $pk .'_list');
+        $code_buf->pushStr(' * @return ' . $model_class .'[]');
+        $code_buf->pushStr(' */');
+        $code_buf->pushStr('public function getIn(array $' . $pk . '_list)');
+        $code_buf->pushStr('{')->indent();
+        $code_buf->pushStr('$db = $this->getDb();');
+        $code_buf->pushStr("\$sql = 'SELECT * FROM `$table_name` WHERE `{$pk}` in (\"' . join('\",\"', \${$pk}_list) . '\")';");
+        $code_buf->pushStr('$result = $db->getMultiRow($sql, self::MODEL_CLASS);');
+        $code_buf->pushStr('return $result;');
+        $code_buf->backIndent()->pushStr('}');
+
+        $code_buf->emptyLine()->pushStr('/**');
         $code_buf->pushStr(' * 主键 更新');
         $code_buf->pushStr(' * @param ' . $model_class . ' $model');
         $code_buf->pushStr(' * @param array $append_where 附加的条件');
-        $code_buf->pushStr(' * @return int');
+        $code_buf->pushStr(' * @return int 影响条数');
         $code_buf->pushStr(' * @throws \Exception');
         $code_buf->pushStr(' */');
         $code_buf->pushStr('public function update(' . $model_class . ' $model, $append_where = null)');
@@ -225,7 +238,7 @@ class DaoHelper extends ConfigBase
         $code_buf->pushStr(' * 主键 删除');
         $code_buf->pushStr(' * @param ' . $pk_type . ' $' . $pk);
         $code_buf->pushStr(' * @param array $append_where 附加的条件');
-        $code_buf->pushStr(' * @return int');
+        $code_buf->pushStr(' * @return int 影响条数');
         $code_buf->pushStr(' */');
         $code_buf->pushStr('public function delete($' . $pk . ', $append_where = null)');
         $code_buf->pushStr('{')->indent();

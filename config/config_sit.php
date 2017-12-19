@@ -4,12 +4,13 @@ return array(
     //接口超时时间
     'default_curl_timeout' => 3000,
     //临时目录
-    'runtime_path' => '/var/wd/log/ui_service/',
+    'runtime_path' => '/var/wd/ui_service/',
     //环境【重要】
     'env' => 'sit',
     //日志配置
-    'logger' => array(
+    'uis-logger' => array(
         'host' => '127.0.0.1',
+        'log_post_size' => 0xffff
     ),
     //接口配置
     'uis-http' => array(
