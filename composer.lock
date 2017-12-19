@@ -220,16 +220,16 @@
         },
         {
             "name": "uistd/dop",
-            "version": "3.0.5",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "a2553304f396cc5e4b2887262b2b64d9cc67fd78"
+                "reference": "8ed45e51f754f6d25c660fd073bec5217e17d829"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.5.0/a2553304f396cc5e4b2887262b2b64d9cc67fd78.zip",
-                "reference": "a2553304f396cc5e4b2887262b2b64d9cc67fd78",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.6.0/8ed45e51f754f6d25c660fd073bec5217e17d829.zip",
+                "reference": "8ed45e51f754f6d25c660fd073bec5217e17d829",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -272,20 +272,20 @@
                 "ui service",
                 "uistd"
             ],
-            "time": "2017-12-19T00:47:51+00:00"
+            "time": "2017-12-19T06:24:15+00:00"
         },
         {
             "name": "uistd/dop-uis",
-            "version": "3.0.2",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/uis.git",
-                "reference": "484ef86d4b9e776ef2e515089e7b4abdd0ede0e3"
+                "reference": "b31f5c7bc0c0534e1df741659aaf8b71664d313d"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop-uis/3.0.2.0/484ef86d4b9e776ef2e515089e7b4abdd0ede0e3.zip",
-                "reference": "484ef86d4b9e776ef2e515089e7b4abdd0ede0e3",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop-uis/3.0.5.0/b31f5c7bc0c0534e1df741659aaf8b71664d313d.zip",
+                "reference": "b31f5c7bc0c0534e1df741659aaf8b71664d313d",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -322,7 +322,7 @@
                 "ui service",
                 "uis"
             ],
-            "time": "2017-12-18T08:59:44+00:00"
+            "time": "2017-12-19T06:57:57+00:00"
         },
         {
             "name": "uistd/event",
@@ -483,16 +483,16 @@
         },
         {
             "name": "uistd/logger",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/logger.git",
-                "reference": "b7505b4ad9f2604f0858859ffb1f3b85895328c2"
+                "reference": "aefc4acb76a07d6737eb69bbb2de7fdc8e79a7bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/logger/2.0.0.0/b7505b4ad9f2604f0858859ffb1f3b85895328c2.zip",
-                "reference": "b7505b4ad9f2604f0858859ffb1f3b85895328c2",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/logger/2.0.1.0/aefc4acb76a07d6737eb69bbb2de7fdc8e79a7bf.zip",
+                "reference": "aefc4acb76a07d6737eb69bbb2de7fdc8e79a7bf",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -531,7 +531,7 @@
                 "ui service",
                 "uistd"
             ],
-            "time": "2017-12-18T03:23:13+00:00"
+            "time": "2017-12-19T06:59:13+00:00"
         },
         {
             "name": "uistd/mysql",
@@ -590,16 +590,16 @@
         },
         {
             "name": "uistd/php-dop",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/php.git",
-                "reference": "4f7dae4f4c2eea20b6c3d69c3c2fded24ef23ccd"
+                "reference": "1f0f57aed2590bdc783481251841c0386d858c0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/php-dop/3.0.2.0/4f7dae4f4c2eea20b6c3d69c3c2fded24ef23ccd.zip",
-                "reference": "4f7dae4f4c2eea20b6c3d69c3c2fded24ef23ccd",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/php-dop/3.0.3.0/1f0f57aed2590bdc783481251841c0386d858c0e.zip",
+                "reference": "1f0f57aed2590bdc783481251841c0386d858c0e",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -625,13 +625,13 @@
                     "role": "Founder and project lead"
                 }
             ],
-            "description": "uistd dop php common files",
+            "description": "DOP自动生成的代码运行所需要的依赖文件",
             "keywords": [
                 "dop",
                 "php",
                 "ui service"
             ],
-            "time": "2017-12-18T08:28:27+00:00"
+            "time": "2017-12-19T11:04:52+00:00"
         },
         {
             "name": "uistd/tpl",

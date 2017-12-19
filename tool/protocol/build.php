@@ -1,7 +1,7 @@
 <?php
 
 use UiStd\Dop\Manager;
-use UiStd\Common\Config as FFanConfig;
+use UiStd\Common\Config as UisConfig;
 use UiStd\Tpl\Tpl;
 
 define('ROOT_PATH', dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);
@@ -12,7 +12,7 @@ require_once ROOT_PATH . 'vendor/uistd/dop/tool/GitHelper.php';
 
 $build_name = isset($argv[1]) ? $argv[1] : 'main';
 
-FFanConfig::addArray(array(
+UisConfig::addArray(array(
         'env' => 'dev',
         'runtime_path' => dirname(dirname(__DIR__)) . '/runtime',
         'uis-tpl' => array('tpl_dir' => 'tool/protocol')

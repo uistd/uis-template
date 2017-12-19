@@ -2,6 +2,7 @@
 
 namespace Uis\Tool;
 
+use UiStd\Common\Str;
 use UiStd\Uis\Base\Tool;
 
 /**
@@ -33,16 +34,19 @@ class ConfigCheckTool extends Tool
         $result[] = 'PHP version:' . phpversion();
         foreach ($all_config as $name => $value) {
             //如果 是mysql的配置
-            if (0 === strpos($name, 'ffan-mysql:')) {
+            if (0 === strpos($name, 'uis-mysql:')) {
                 $result[] = $name . ' => ' . $this->checkMysql($value);
             }
             //redis配置
-            if (0 === strpos($name, 'cache-redis:')) {
-                $result[] = $name . ' => ' . $this->checkRedis($value);
-            }
-            //redis集群
-            if (0 === strpos($name, 'cluster-redis:')) {
-                $result[] = $name . ' => ' . $this->checkClusterRedis($value);
+            if (0 === strpos($name, 'uis-cache:')) {
+                $type = isset($value['type']) ? $value['type'] : str_replace('uis-cache:', '', $name);
+                if ('redis' === $type) {
+                    $result[] = $name . ' => ' . $this->checkRedis($value);
+                } elseif ('ClusterRedis' === Str::camelName($type)) {
+                    $result[] = $name . ' => ' . '<br>' . $this->checkClusterRedis($value['server']);
+                } elseif ('memcached' === $type) {
+                    $result[] = $name . ' => ' . $this->checkMemcached($value['server']);
+                }
             }
         }
         $result[] = $this->extensionCheck('apcu');
@@ -79,6 +83,48 @@ class ConfigCheckTool extends Tool
         $link_obj = new \mysqli($host, $user, $password, $database, $port);
         if ($link_obj->connect_errno) {
             return $this->msg($msg . $link_obj->connect_error, true);
+        }
+        return $this->msg($msg . 'success');
+    }
+
+    /**
+     * 检查 memcached配置
+     * @param array $conf_arr
+     * @return string
+     */
+    private function checkMemcached($conf_arr)
+    {
+        //直接是一个节点
+        if (isset($conf_arr['host'], $conf_arr['port'])) {
+            return $this->checkMemcacheNode($conf_arr['host'], $conf_arr['port']);
+        } else {
+            $result = array('<br>');
+            foreach ($conf_arr as $i => $item) {
+                if (is_array($item)) {
+                    $result[] = '节点 ' . $i . ' => ' . $this->checkMemcacheNode($item[0], $item[1]);
+                }
+            }
+            return join('<br>', $result);
+        }
+    }
+
+    /**
+     * 检查 memcached 节点
+     * @param string $host
+     * @param int $port
+     * @return string
+     */
+    private function checkMemcacheNode($host, $port)
+    {
+        $msg = $host . ':' . $port . ' ';
+        $cache = new \Memcached();
+        $re = $cache->addServer($host, $port);
+        if (!$re) {
+            return $this->msg("Can not add server " . $msg, true);
+        }
+        $re = $cache->set('check_config_key', 1, 10);
+        if (!$re) {
+            return $this->msg($msg . 'Save error :' . $cache->getResultMessage(), true);
         }
         return $this->msg($msg . 'success');
     }
