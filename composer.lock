@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "393bb1dbc79442a5c7bc9460fedd1671",
+    "content-hash": "86f228b6a20e0b2281e02c54ddb3eb27",
     "packages": [
         {
             "name": "uistd/async",
@@ -220,16 +220,16 @@
         },
         {
             "name": "uistd/dop",
-            "version": "3.0.3",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "87c75ba993a0a96554acc92b6a8132489a714ab1"
+                "reference": "a2553304f396cc5e4b2887262b2b64d9cc67fd78"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.3.0/87c75ba993a0a96554acc92b6a8132489a714ab1.zip",
-                "reference": "87c75ba993a0a96554acc92b6a8132489a714ab1",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.5.0/a2553304f396cc5e4b2887262b2b64d9cc67fd78.zip",
+                "reference": "a2553304f396cc5e4b2887262b2b64d9cc67fd78",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -272,7 +272,7 @@
                 "ui service",
                 "uistd"
             ],
-            "time": "2017-12-18T08:47:29+00:00"
+            "time": "2017-12-19T00:47:51+00:00"
         },
         {
             "name": "uistd/dop-uis",
@@ -429,16 +429,16 @@
         },
         {
             "name": "uistd/http",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-http.git",
-                "reference": "4ba4deddbc067a8c33330161b9286d004245f203"
+                "reference": "bac568b880981f81f8930c96d69563bae457a0a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/http/2.0.0.0/4ba4deddbc067a8c33330161b9286d004245f203.zip",
-                "reference": "4ba4deddbc067a8c33330161b9286d004245f203",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/http/2.0.1.0/bac568b880981f81f8930c96d69563bae457a0a8.zip",
+                "reference": "bac568b880981f81f8930c96d69563bae457a0a8",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -479,7 +479,7 @@
                 "ui service",
                 "uis"
             ],
-            "time": "2017-12-18T03:56:24+00:00"
+            "time": "2017-12-19T01:01:04+00:00"
         },
         {
             "name": "uistd/logger",

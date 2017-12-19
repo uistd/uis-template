@@ -4,6 +4,6 @@
 define('ROOT_PATH', dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);
 chdir(__DIR__);
 require_once ROOT_PATH . 'vendor/autoload.php';
-require_once ROOT_PATH . 'vendor/ffan/dop/tool/SwaggerToXml.php';
+require_once ROOT_PATH . 'vendor/uistd/dop/tool/SwaggerToXml.php';
 
 SwaggerToXml::folderDetect(__DIR__ .'/xml');

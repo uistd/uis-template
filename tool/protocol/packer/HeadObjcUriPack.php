@@ -2,9 +2,7 @@
 
 namespace UiStd\Dop\Coder\Objc;
 
-use UiStd\Dop\Build\FileBuf;
 use UiStd\Dop\Build\PackerBase;
-use UiStd\Dop\Protocol\Struct;
 
 /**
  * Class FixDataPack 生成接口uri地址
