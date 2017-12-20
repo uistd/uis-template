@@ -1,6 +1,6 @@
 <?php
 
-namespace Uis\Demo;
+namespace Uis\Filter;
 
 use UiStd\Uis\Base\Filter;
 use UiStd\Common\Ip;

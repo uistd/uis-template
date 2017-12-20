@@ -8,8 +8,11 @@ return array(
     //日志目录，默认在runtime目录的logs
     'log_path' => 'logs',
     //接口配置
-    'ffan-http' => array(
+    'uis-http' => array(
         'debug_mode' => true,
         'gateway_host' => 'http://api.sit.ffan.com'
     ),
+    'uis-work' => array(
+        '* * * * * Demo/DemoWork.php'
+    )
 );

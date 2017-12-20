@@ -1,13 +1,13 @@
 <?php
 
-namespace Sdk\UserPlatform;
+namespace Uis\Sdk\UserPlatform;
 
 use UiStd\Uis\Base\ActionException;
 use UiStd\Http\HttpClient;
 
 /**
  *  根据uid查puid
- * @package Sdk\UserPlatform
+ * @package Uis\Sdk\UserPlatform
  */
 class ApiGetPuidByUid extends HttpClient
 {

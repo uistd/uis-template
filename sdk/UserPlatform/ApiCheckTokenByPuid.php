@@ -1,12 +1,12 @@
 <?php
 
-namespace Sdk\UserPlatform;
+namespace Uis\Sdk\UserPlatform;
 
 use UiStd\Http\HttpClient;
 
 /**
  *  验证用户登录
- * @package Sdk\UserPlatform
+ * @package Uis\Sdk\UserPlatform
  */
 class ApiCheckTokenByPuid extends HttpClient
 {

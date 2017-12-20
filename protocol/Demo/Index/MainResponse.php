@@ -1,6 +1,6 @@
 <?php
 
-namespace Protocol\Demo\Index;
+namespace Uis\Protocol\Demo\Index;
 
 use UiStd\DopLib\DopEncode;
 use UiStd\DopLib\DopDecode;
@@ -8,7 +8,7 @@ use UiStd\Uis\Base\Result;
 
 /**
  *  简单的测试
- * @package Protocol\Demo\Index
+ * @package Uis\Protocol\Demo\Index
  */
 class MainResponse extends Result
 {

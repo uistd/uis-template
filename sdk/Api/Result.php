@@ -1,10 +1,10 @@
 <?php
 
-namespace Sdk\Api;
+namespace Uis\Sdk\Api;
 
 /**
  *  
- * @package Sdk\Api
+ * @package Uis\Sdk\Api
  */
 class Result
 {

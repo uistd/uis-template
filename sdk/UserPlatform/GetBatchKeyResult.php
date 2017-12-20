@@ -1,12 +1,12 @@
 <?php
 
-namespace Sdk\UserPlatform;
+namespace Uis\Sdk\UserPlatform;
 
-use Sdk\Api\Result;
+use Uis\Sdk\Api\Result;
 
 /**
  *  批量查询用户信息
- * @package Sdk\UserPlatform
+ * @package Uis\Sdk\UserPlatform
  */
 class GetBatchKeyResult extends Result
 {

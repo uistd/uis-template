@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 在这里 配置mysql数据库-->
+<protocol type="mysql" host="10.209.44.2:10415" user="feed_activity" password="feed_activity" database="feed_activity">
+</protocol>

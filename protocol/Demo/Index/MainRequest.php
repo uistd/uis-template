@@ -1,12 +1,12 @@
 <?php
 
-namespace Protocol\Demo\Index;
+namespace Uis\Protocol\Demo\Index;
 
 use UiStd\Uis\Base\IRequest;
 
 /**
  *  简单的测试
- * @package Protocol\Demo\Index
+ * @package Uis\Protocol\Demo\Index
  */
 class MainRequest implements IRequest
 {

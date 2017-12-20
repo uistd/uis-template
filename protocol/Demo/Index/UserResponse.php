@@ -1,6 +1,6 @@
 <?php
 
-namespace Protocol\Demo\Index;
+namespace Uis\Protocol\Demo\Index;
 
 use UiStd\DopLib\DopEncode;
 use UiStd\DopLib\DopDecode;
@@ -8,7 +8,7 @@ use UiStd\Uis\Base\Result;
 
 /**
  *  根据puid获取用户信息的demo【严格模式】
- * @package Protocol\Demo\Index
+ * @package Uis\Protocol\Demo\Index
  */
 class UserResponse extends Result
 {

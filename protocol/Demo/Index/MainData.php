@@ -1,12 +1,12 @@
 <?php
 
-namespace Protocol\Demo\Index;
+namespace Uis\Protocol\Demo\Index;
 
 use UiStd\DopLib\DopEncode;
 
 /**
  *  
- * @package Protocol\Demo\Index
+ * @package Uis\Protocol\Demo\Index
  */
 class MainData
 {

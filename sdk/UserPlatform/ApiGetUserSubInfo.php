@@ -1,13 +1,13 @@
 <?php
 
-namespace Sdk\UserPlatform;
+namespace Uis\Sdk\UserPlatform;
 
 use UiStd\Uis\Base\ActionException;
 use UiStd\Http\HttpClient;
 
 /**
  *  获取子系统用户信息
- * @package Sdk\UserPlatform
+ * @package Uis\Sdk\UserPlatform
  */
 class ApiGetUserSubInfo extends HttpClient
 {

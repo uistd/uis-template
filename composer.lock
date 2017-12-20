@@ -220,16 +220,16 @@
         },
         {
             "name": "uistd/dop",
-            "version": "3.0.6",
+            "version": "3.0.7",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "8ed45e51f754f6d25c660fd073bec5217e17d829"
+                "reference": "c5fb034acb1758cc6580fef3ee58bbfd50559742"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.6.0/8ed45e51f754f6d25c660fd073bec5217e17d829.zip",
-                "reference": "8ed45e51f754f6d25c660fd073bec5217e17d829",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.7.0/c5fb034acb1758cc6580fef3ee58bbfd50559742.zip",
+                "reference": "c5fb034acb1758cc6580fef3ee58bbfd50559742",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -272,20 +272,20 @@
                 "ui service",
                 "uistd"
             ],
-            "time": "2017-12-19T06:24:15+00:00"
+            "time": "2017-12-20T07:53:03+00:00"
         },
         {
             "name": "uistd/dop-uis",
-            "version": "3.0.5",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/uis.git",
-                "reference": "b31f5c7bc0c0534e1df741659aaf8b71664d313d"
+                "reference": "d4de6b248f8c5172181cc595edb30a37245686ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop-uis/3.0.5.0/b31f5c7bc0c0534e1df741659aaf8b71664d313d.zip",
-                "reference": "b31f5c7bc0c0534e1df741659aaf8b71664d313d",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop-uis/3.1.0.0/d4de6b248f8c5172181cc595edb30a37245686ab.zip",
+                "reference": "d4de6b248f8c5172181cc595edb30a37245686ab",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -322,7 +322,7 @@
                 "ui service",
                 "uis"
             ],
-            "time": "2017-12-19T06:57:57+00:00"
+            "time": "2017-12-20T07:26:33+00:00"
         },
         {
             "name": "uistd/event",

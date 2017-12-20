@@ -5,7 +5,7 @@ require_once ROOT_PATH . 'vendor/autoload.php';
 
 $build_config = <<<EOT
 [build]
-namespace = 'Sdk'
+namespace = 'Uis\Sdk'
 coder = 'php'
 packer = 'array, uis_sdk'
 code_side = 'client,server'

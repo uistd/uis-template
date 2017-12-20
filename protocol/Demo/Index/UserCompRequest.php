@@ -1,12 +1,12 @@
 <?php
 
-namespace Protocol\Demo\Index;
+namespace Uis\Protocol\Demo\Index;
 
 use UiStd\Uis\Base\IRequest;
 
 /**
  *  根据puid获取用户信息的demo【兼容模式】
- * @package Protocol\Demo\Index
+ * @package Uis\Protocol\Demo\Index
  */
 class UserCompRequest implements IRequest
 {

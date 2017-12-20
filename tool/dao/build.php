@@ -15,7 +15,7 @@ Config::init($config);
 function build_config($name_space)
 {
     $result = array('[build]');
-    $result[] = 'namespace = "' . $name_space . '"';
+    $result[] = 'namespace = "Uis\\' . $name_space . '"';
     $result[] = 'coder = "php"';
     $result[] = 'protocol_type = "data"';
     $result[] = 'build_path = "dao/build"';
@@ -23,6 +23,7 @@ function build_config($name_space)
     $result[] = 'keep_original_name = true';
     $result[] = 'packer = "array"';
     $result[] = 'code_side = "client"';
+    $result[] = 'file_mark = "以下代码由工具自动生成。 数据库发生改变时，在项目主目录运行 php tool/dao/build.php 重新生成"';
     return join(PHP_EOL, $result);
 }
 
@@ -42,11 +43,12 @@ function build($folder)
         }
         $folder = str_replace('.xml', '', $file);
         $build_folder = Utils::fixWithRuntimePath('dao/' . $folder);
-        $full_file = Utils::joinFilePath(__DIR__.'/xml', $file);
+        $full_file = Utils::joinFilePath(__DIR__ . '/xml', $file);
         Utils::pathWriteCheck($build_folder);
         Utils::pathWriteCheck(Utils::fixWithRuntimePath('dao/build/'));
         $des_file = Utils::joinFilePath($build_folder, 'model.xml');
         copy($full_file, $des_file);
+        MysqlToXml::folderDetect($build_folder);
         $camel_folder = Str::camelName($folder);
         $name_space = 'Dao\\' . $camel_folder;
         $build_config = build_config($name_space);
@@ -58,6 +60,7 @@ function build($folder)
         }
         echo $manager->getBuildLog(), PHP_EOL;
         $build_path = Utils::fixWithRootPath('dao/' . $camel_folder .'/Model');
+        Utils::pathWriteCheck($build_path);
         Utils::delDir($build_path);
         $build_result_path = Utils::fixWithRuntimePath('dao/build/Model');
         echo $build_path, PHP_EOL;
@@ -68,5 +71,4 @@ function build($folder)
 
 //先更新当前目录下的所有xml文件
 $path = __DIR__ .'/xml';
-MysqlToXml::folderDetect($path);
 build($path);

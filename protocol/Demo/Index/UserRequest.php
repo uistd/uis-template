@@ -1,13 +1,13 @@
 <?php
 
-namespace Protocol\Demo\Index;
+namespace Uis\Protocol\Demo\Index;
 
 use UiStd\Uis\Base\IRequest;
-use UiStd\Dop\DopValidator;
+use UiStd\DopLib\DopValidator;
 
 /**
  *  根据puid获取用户信息的demo【严格模式】
- * @package Protocol\Demo\Index
+ * @package Uis\Protocol\Demo\Index
  */
 class UserRequest implements IRequest
 {

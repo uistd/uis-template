@@ -1,16 +1,16 @@
 <?php
 
-namespace Protocol\PluginMock\Demo;
+namespace Uis\Protocol\PluginMock\Demo;
 
-use Protocol\Demo\Index\MainRequest;
-use Protocol\Demo\Index\MainData;
-use Protocol\Demo\Index\MainResponse;
-use Protocol\Demo\Index\UserRequest;
-use Protocol\Demo\Index\UserData;
-use Protocol\Demo\Index\UserResponse;
-use Protocol\Demo\Index\UserCompRequest;
-use Protocol\Demo\Index\UserCompData;
-use Protocol\Demo\Index\UserCompResponse;
+use Uis\Protocol\Demo\Index\MainRequest;
+use Uis\Protocol\Demo\Index\MainData;
+use Uis\Protocol\Demo\Index\MainResponse;
+use Uis\Protocol\Demo\Index\UserRequest;
+use Uis\Protocol\Demo\Index\UserData;
+use Uis\Protocol\Demo\Index\UserResponse;
+use Uis\Protocol\Demo\Index\UserCompRequest;
+use Uis\Protocol\Demo\Index\UserCompData;
+use Uis\Protocol\Demo\Index\UserCompResponse;
 
 class MockDemoIndex extends \UiStd\DopLib\DopMock
 {

@@ -127,10 +127,11 @@ class DaoHelper extends ConfigBase
         $code_buf = new CodeBuf();
         $u_db_name = Str::camelName($this->file_name);
         $code_buf->pushStr('<?php')->emptyLine();
-        $code_buf->pushStr('namespace Dao\\' . $u_db_name . '\\Tpl;')->emptyLine();
+        $code_buf->pushStr('//以下代码由工具自动生成。 数据库发生改变时，在项目主目录运行 php tool/dao/dao.php 重新生成')->emptyLine();
+        $code_buf->pushStr('namespace Uis\Dao\\' . $u_db_name . '\\Tpl;')->emptyLine();
         $u_table_name = Str::camelName($table_name);
         $model_class = $u_table_name . 'Model';
-        $full_model_class = 'Dao\\' . $u_db_name . '\Model\\' . $model_class;
+        $full_model_class = 'Uis\Dao\\' . $u_db_name . '\Model\\' . $model_class;
         $code_buf->pushStr('use ' . $full_model_class . ';');
         $code_buf->pushStr('use UiStd\Mysql\TplBase;')->emptyLine();
         $class_name = $u_table_name . 'Tpl';

@@ -26,5 +26,19 @@ return array(
             '10.213.33.156:10596',
             '10.213.33.156:10652',
         )
-    )
+    ),
+    //crontab配置
+    'uis-work' => array(
+        '* * * * * Demo/DemoWork.php'
+    ),
+
+    //Demo数据库配置
+    'uis-mysql:demo' => array(
+        'host' => '10.209.44.2',
+        'port' => 10415,
+        'user' => 'feed_activity',
+        'password' => 'feed_activity',
+        'database' => 'feed_activity',
+        'charset' => 'utf8mb4'
+    ),
 );

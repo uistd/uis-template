@@ -26,5 +26,9 @@ return array(
             '10.213.33.170:10596',
             'w10652.uat.wdds.redis.com:10652',
         )
-    )
+    ),
+    //crontab配置
+    'uis-work' => array(
+        '* * * * * Demo/DemoWork.php'
+    ),
 );

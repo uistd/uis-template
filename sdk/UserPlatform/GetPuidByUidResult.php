@@ -1,12 +1,12 @@
 <?php
 
-namespace Sdk\UserPlatform;
+namespace Uis\Sdk\UserPlatform;
 
-use Sdk\Api\Result;
+use Uis\Sdk\Api\Result;
 
 /**
  *  根据uid查puid
- * @package Sdk\UserPlatform
+ * @package Uis\Sdk\UserPlatform
  */
 class GetPuidByUidResult extends Result
 {

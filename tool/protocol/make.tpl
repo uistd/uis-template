@@ -2,7 +2,7 @@
 [build]
 note = 'UI service'
 ;生成类文件的命名空间前缀
-namespace = 'Protocol/'
+namespace = 'Uis\Protocol'
 ;coder 代码生成器
 coder = 'php'
 ;生成数据打包、解包方式

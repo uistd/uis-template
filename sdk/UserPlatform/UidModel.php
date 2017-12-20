@@ -1,10 +1,10 @@
 <?php
 
-namespace Sdk\UserPlatform;
+namespace Uis\Sdk\UserPlatform;
 
 /**
  *  
- * @package Sdk\UserPlatform
+ * @package Uis\Sdk\UserPlatform
  */
 class UidModel
 {

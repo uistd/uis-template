@@ -20,9 +20,15 @@
   },
   "autoload": {
     "psr-4": {
-      "Protocol\\": "protocol",
-      "Sdk\\": "sdk",
-      "Dao\\" : "dao"
+      "Uis\\Protocol\\": "protocol",
+      "Uis\\Sdk\\": "sdk",
+      "Uis\\Dao\\": "dao",
+      "Uis\\Helper\\": "helper",
+      "Uis\\Page\\": "page",
+      "Uis\\Filter\\": "filter",
+      "Uis\\Activity\\": "activity",
+      "Uis\\Work\\": "work",
+      "Uis\\App\\": "apps"
     }
   },
   "config": {
