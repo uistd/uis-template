@@ -276,16 +276,16 @@
         },
         {
             "name": "uistd/dop-uis",
-            "version": "3.1.0",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/uis.git",
-                "reference": "d4de6b248f8c5172181cc595edb30a37245686ab"
+                "reference": "0daa67add90975b6862448eacc7eb1f4e8d37b81"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop-uis/3.1.0.0/d4de6b248f8c5172181cc595edb30a37245686ab.zip",
-                "reference": "d4de6b248f8c5172181cc595edb30a37245686ab",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop-uis/3.1.2.0/0daa67add90975b6862448eacc7eb1f4e8d37b81.zip",
+                "reference": "0daa67add90975b6862448eacc7eb1f4e8d37b81",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -322,7 +322,7 @@
                 "ui service",
                 "uis"
             ],
-            "time": "2017-12-20T07:26:33+00:00"
+            "time": "2017-12-20T11:02:29+00:00"
         },
         {
             "name": "uistd/event",

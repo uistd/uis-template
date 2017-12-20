@@ -28,7 +28,9 @@
       "Uis\\Filter\\": "filter",
       "Uis\\Activity\\": "activity",
       "Uis\\Work\\": "work",
-      "Uis\\App\\": "apps"
+      "Uis\\App\\": "apps",
+      "Uis\\Mock\\": "mock",
+      "Uis\\Tool\\": "tool/class"
     }
   },
   "config": {

@@ -1,10 +1,8 @@
 <?php
 
 use UiStd\Common\Config;
-use UiStd\Common\Env;
-use UiStd\Logger\FileLogger;
-use UiStd\Logger\LogHelper;
-use UiStd\Logger\LogLevel;
+use UiStd\Uis\Base\ServerHandler;
+use UiStd\Uis\Base\Uis;
 
 define('ROOT_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR);
 chdir(__DIR__);
@@ -25,12 +23,12 @@ $config = require(ROOT_PATH . 'config/config.php');
  */
 function init_logger($file_name)
 {
-    LogHelper::getLogRouter();
-    $log_level = 0xffff;
-    if (Env::isProduct()) {
-        $log_level ^= LogLevel::DEBUG;
-    }
-    new FileLogger('logs/' . $GLOBALS['APP_NAME'] . '/crontab/', $file_name, $log_level, FileLogger::OPT_SPLIT_BY_DAY);
+    $server = new ServerHandler();
+    $file_name = strtr($file_name, '/\\', '__');
+    $path = $GLOBALS['APP_NAME'].'/crontab/'. $file_name;
+    $server->setPathInfo($path);
+    $server->parse();
+    Uis::getLogger();
 }
 
 Config::init($config);
