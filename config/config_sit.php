@@ -17,28 +17,9 @@ return array(
         'debug_mode' => true,
         'gateway_host' => 'http://api.sit.ffan.com'
     ),
-    //公共redis集群
-    'uis-cache:public' => array(
-        'type' => 'clusterRedis',
-        'server' => array(
-            '10.213.33.156:10401',
-            '10.213.33.156:10616',
-            '10.213.33.156:10596',
-            '10.213.33.156:10652',
-        )
-    ),
+
     //crontab配置
     'uis-work' => array(
         '* * * * * Demo/DemoWork.php'
-    ),
-
-    //Demo数据库配置
-    'uis-mysql:demo' => array(
-        'host' => '10.209.44.2',
-        'port' => 10415,
-        'user' => 'feed_activity',
-        'password' => 'feed_activity',
-        'database' => 'feed_activity',
-        'charset' => 'utf8mb4'
     ),
 );
