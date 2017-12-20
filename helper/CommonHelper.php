@@ -1,8 +1,7 @@
 <?php
 
-namespace Helper;
+namespace Uis\Helper;
 
-use Uis\Helper\LoginHelper;
 use UiStd\Cache\CacheFactory;
 use UiStd\Cache\CacheInterface;
 use UiStd\Uis\Base\ActionException;

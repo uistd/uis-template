@@ -3,6 +3,7 @@
 namespace Uis\Page\Demo;
 
 use Uis\Activity\Demo\DemoActivity;
+use Uis\Helper\CommonHelper;
 use UiStd\Uis\Base\ActivityManager;
 use UiStd\Uis\Base\Page;
 use UiStd\Http\HttpClient;
@@ -36,6 +37,7 @@ class IndexPage extends Page
      */
     public function actionUser(UserRequest $request)
     {
+        $puid = CommonHelper::getLoginPuid();
         $api = new ApiGetUser();
         $api->keyword = $request->puid;
         //使用严格模式获取数据, 一旦服务端报错，下面的代码就不会执行了

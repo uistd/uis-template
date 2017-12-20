@@ -2,7 +2,6 @@
 
 namespace Uis\Helper;
 
-use Helper\CommonHelper;
 use Uis\Sdk\UserPlatform\ApiCheckTokenByPuid;
 
 /**
