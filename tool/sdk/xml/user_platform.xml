@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<protocol public="git" remote="ssh://git@gitlab.ffan.biz:8022/uis/api.git" file="P_平台会员/user_platform.xml">
+<protocol public="git" remote="ssh://git@gitlab.ffan.biz:8022/uis/api.git" file="userplatform/user_platform.xml">
     <model name="user_detail">
         <uint name="verify"/>
         <string name="liveCity"/>
