@@ -1,9 +1,9 @@
 <?php
-//php xml.php http://feed.intra.sit.ffan.com/v2/api-docs feed
+
+use UiStd\Dop\Tool\SwaggerToXml;
 
 define('ROOT_PATH', dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);
 chdir(__DIR__);
 require_once ROOT_PATH . 'vendor/autoload.php';
-require_once ROOT_PATH . 'vendor/uistd/dop/tool/SwaggerToXml.php';
 
-SwaggerToXml::folderDetect(__DIR__ .'/xml');
+SwaggerToXml::folderDetect(__DIR__ . '/xml');

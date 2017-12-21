@@ -60,16 +60,16 @@
         },
         {
             "name": "uistd/cache",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/php/ffan-cache.git",
-                "reference": "cd06fb2e9eb36d0831419934d8983cf7d2a208eb"
+                "reference": "e6f15534dd62fec85890bb22624837d242d53967"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/cache/3.0.0.0/cd06fb2e9eb36d0831419934d8983cf7d2a208eb.zip",
-                "reference": "cd06fb2e9eb36d0831419934d8983cf7d2a208eb",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/cache/3.0.1.0/e6f15534dd62fec85890bb22624837d242d53967.zip",
+                "reference": "e6f15534dd62fec85890bb22624837d242d53967",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -110,7 +110,7 @@
                 "ui service",
                 "uistd"
             ],
-            "time": "2017-12-18T03:41:18+00:00"
+            "time": "2017-12-20T13:08:19+00:00"
         },
         {
             "name": "uistd/common",
@@ -220,16 +220,16 @@
         },
         {
             "name": "uistd/dop",
-            "version": "3.0.7",
+            "version": "3.0.9",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "c5fb034acb1758cc6580fef3ee58bbfd50559742"
+                "reference": "544816acdac486986dd72ac7de7399e4de273e67"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.7.0/c5fb034acb1758cc6580fef3ee58bbfd50559742.zip",
-                "reference": "c5fb034acb1758cc6580fef3ee58bbfd50559742",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.9.0/544816acdac486986dd72ac7de7399e4de273e67.zip",
+                "reference": "544816acdac486986dd72ac7de7399e4de273e67",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -272,7 +272,7 @@
                 "ui service",
                 "uistd"
             ],
-            "time": "2017-12-20T07:53:03+00:00"
+            "time": "2017-12-21T08:25:40+00:00"
         },
         {
             "name": "uistd/dop-uis",

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol public="git" remote="ssh://git@gitlab.ffan.biz:8022/uis/public.git" file="demo/common.xml">
+    <model name="user">
+        <string name="name" note="用户名"/>
+        <string name="avatar" note="头像"/>
+        <int name="gender" note="性别"/>
+        <int name="city" note="居住城市"/>
+        <int name="level" note="等级"/>
+        <int name="iskol" note="是否是kol"/>
+    </model>
+
+    <model name="topic">
+        <string name="title" note="标题"/>
+        <string name="introduce" note="描述"/>
+    </model>
+</protocol>

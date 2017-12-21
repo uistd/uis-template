@@ -4,11 +4,11 @@ use UiStd\Dop\Manager;
 use UiStd\Common\Config;
 use UiStd\Common\Str;
 use UiStd\Common\Utils;
+use UiStd\Dop\Tool\MysqlToXml;
 
 define('ROOT_PATH', dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);
 chdir(__DIR__);
 require_once ROOT_PATH . 'vendor/autoload.php';
-require_once ROOT_PATH . 'vendor/uistd/dop/tool/MysqlToXml.php';
 $config = require(ROOT_PATH . 'config/config.php');
 Config::init($config);
 
