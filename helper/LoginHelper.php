@@ -51,7 +51,10 @@ class LoginHelper
             $api_req->puid = $puid;
             $result = $api_req->request();
             if (200 !== $result->status) {
-                $cache->set($cache_key, 'INVALID', $cache_ttl);
+                //如果 平台明确返回 token 验证不正确
+                if (4308 === $result->status) {
+                    $cache->set($cache_key, 'INVALID', $cache_ttl);
+                }
                 return false;
             }
             $cache->set($cache_key, $token, $cache_ttl);
