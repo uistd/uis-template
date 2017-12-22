@@ -30,16 +30,10 @@ class LoginHelper
         } elseif (!empty($_GET['puid']) && !empty($_GET['pLoginToken'])) {
             $puid = $_GET['puid'];
             $token = $_GET['pLoginToken'];
-        } elseif (!empty($_COOKIE['puid'])) {
+        } elseif (!empty($_COOKIE['puid']) && (!empty($_COOKIE['pLoginToken']) || !empty($_COOKIE['ploginToken']))) {
             //cookie里叫 ploginToken 或者 pLoginToken
-            if (isset($_COOKIE['pLoginToken'])) {
-                $token = $_COOKIE['pLoginToken'];
-            } elseif (isset($_COOKIE['ploginToken'])) {
-                $token = $_COOKIE['ploginToken'];
-            } else {
-                return false;
-            }
             $puid = $_COOKIE['puid'];
+            $token = empty($_COOKIE['pLoginToken']) ? $_COOKIE['ploginToken'] : $_COOKIE['pLoginToken'];
         } else {
             return false;
         }
@@ -74,8 +68,9 @@ class LoginHelper
      * @param string $token
      * @return string
      */
-    public static function cacheKey($puid, $token) {
-        return 'tk_'. $puid .'_'. $token;
+    public static function cacheKey($puid, $token)
+    {
+        return 'tk_' . $puid . '_' . $token;
     }
 
     /**
