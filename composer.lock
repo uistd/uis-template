@@ -220,16 +220,16 @@
         },
         {
             "name": "uistd/dop",
-            "version": "3.0.9",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "http://gitlab.ffan.biz/dop/dop.git",
-                "reference": "544816acdac486986dd72ac7de7399e4de273e67"
+                "reference": "490a9450bf45802eb509142a0f2e47ab89aeb80b"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.0.9.0/544816acdac486986dd72ac7de7399e4de273e67.zip",
-                "reference": "544816acdac486986dd72ac7de7399e4de273e67",
+                "url": "http://composer.intra.ffan.com/repo/private/dists/uistd/dop/3.1.1.0/490a9450bf45802eb509142a0f2e47ab89aeb80b.zip",
+                "reference": "490a9450bf45802eb509142a0f2e47ab89aeb80b",
                 "shasum": null,
                 "mirrors": [
                     {
@@ -272,7 +272,7 @@
                 "ui service",
                 "uistd"
             ],
-            "time": "2017-12-21T08:25:40+00:00"
+            "time": "2017-12-24T13:39:12+00:00"
         },
         {
             "name": "uistd/dop-uis",

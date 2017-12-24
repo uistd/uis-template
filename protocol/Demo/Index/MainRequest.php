@@ -66,13 +66,13 @@ class MainRequest implements IRequest
     public function validateCheck()
     {
         if (null !== $this->a) {
-            if ($this->a < -0x80000000 || $this->a > 0x7fffffff) {
+            if ($this->a < 1 || $this->a > 2147483647) {
                 $this->validate_error_msg = "最小值1";
                 return false;
             }
         }
         if (null !== $this->b) {
-            if ($this->b < -0x80000000 || $this->b > 0x7fffffff) {
+            if ($this->b < 1 || $this->b > 2147483647) {
                 $this->validate_error_msg = "最小值1";
                 return false;
             }
