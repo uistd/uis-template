@@ -19,8 +19,8 @@ function rename_env()
     done
 }
 
-composer config -g repo.privates composer http://composer.intra.ffan.com/repo/private/
-composer config -g repo.packagist composer  http://composer.intra.ffan.com/repo/packagist/
+composer config -g repo.privates composer http://composer.intra.uistd.com/repo/private/
+composer config -g repo.packagist composer  http://composer.intra.uistd.com/repo/packagist/
 composer config -g secure-http 0
 composer install || exit 1
 

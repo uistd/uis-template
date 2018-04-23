@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>{{if isset($title)}}{{$title}}{{else}}UIService tool{{/if}}</title>
-    <link rel="stylesheet" href="https://nres.ffan.com/xadmin/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://nres.ffan.com/xadmin/css/font-awesome.min.css"/>
-    <script src="https://admin.ffan.com/Public/js/jquery-2.1.0.min.js"></script>
+    <link rel="stylesheet" href="https://nres.uistd.com/xadmin/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://nres.uistd.com/xadmin/css/font-awesome.min.css"/>
+    <script src="https://admin.uistd.com/Public/js/jquery-2.1.0.min.js"></script>
 </head>
 <style>
     .list-group-item {

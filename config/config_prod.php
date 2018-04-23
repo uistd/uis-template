@@ -15,7 +15,7 @@ return array(
     //接口配置
     'uis-http' => array(
         'debug_mode' => false,
-        'gateway_host' => 'http://api.ffan.com'
+        'gateway_host' => 'http://api.uistd.com'
     ),
     //公共redis集群
     'uis-cache:public' => array(

@@ -15,7 +15,7 @@ return array(
     //接口配置
     'uis-http' => array(
         'debug_mode' => true,
-        'gateway_host' => 'http://api.sit.ffan.com'
+        'gateway_host' => 'http://api.sit.uistd.com'
     ),
 
     //crontab配置

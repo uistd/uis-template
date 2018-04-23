@@ -16,7 +16,7 @@
             }
             $('#check_result').html('');
             view('加载服务器列表..');
-            $.get('http://uis.intra.sit.ffan.com' + location.pathname + '?UIS_DEBUG_MODE=0&tool=server_list&env=' + env, function (server_list) {
+            $.get('http://uis.intra.sit.uistd.com' + location.pathname + '?UIS_DEBUG_MODE=0&tool=server_list&env=' + env, function (server_list) {
                 if (!$.isArray(server_list)) {
                     view('失败', 'red');
                     return;
